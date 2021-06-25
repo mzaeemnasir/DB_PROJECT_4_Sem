@@ -131,7 +131,6 @@ namespace DB_PROJECT
                 String.IsNullOrEmpty(pass_input.Text) && String.IsNullOrEmpty(cnfrm_pass_input.Text))
             {
                 MessageBox.Show("Please Input Details");
-               
             }
             else
             {
@@ -141,8 +140,26 @@ namespace DB_PROJECT
                 }
                 else
                 {
-                    MessageBox.Show("You Account Has Been Created");
+                    con.Open();
+                    // Query to Insert into the Data base 
+                    string qurery_text = @"INSERT INTO BookRack.dbo.User_information (email,fullName,userPhone,userAddress,userPassword) VALUES ('"+email_input.Text+"', '"+name_input.Text+"' , '"+phone_number_input.Text+"','"+Address_input.Text+"','"+pass_input.Text+"');";
+                    SqlCommand query = new SqlCommand(qurery_text,con);
+                    //Initilizing the SQL QUERY TO Insert Data to the Data base
+                    int i = query.ExecuteNonQuery();
+                    if(i!=0)
+                    {
+                        MessageBox.Show("You Account Has Been Created");
+                        MessageBox.Show("Go Back and Log In to our System 😊😊");
+                        con.Close();
+                        panel3.BringToFront();
+                        SignUp_panel.Hide();
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error with the Database Please Check ");
+                    }
+                    con.Close();
                 }
 
             }

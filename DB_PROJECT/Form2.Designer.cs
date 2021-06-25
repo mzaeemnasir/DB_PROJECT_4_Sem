@@ -138,7 +138,7 @@ namespace DB_PROJECT
             this.full_name.BackColor = System.Drawing.Color.Transparent;
             this.full_name.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.full_name.ForeColor = System.Drawing.Color.Black;
-            this.full_name.Location = new System.Drawing.Point(29, 117);
+            this.full_name.Location = new System.Drawing.Point(409, 137);
             this.full_name.Name = "full_name";
             this.full_name.Size = new System.Drawing.Size(81, 18);
             this.full_name.TabIndex = 0;
@@ -160,7 +160,7 @@ namespace DB_PROJECT
             // 
             this.name_input.BackColor = System.Drawing.Color.White;
             this.name_input.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.name_input.Location = new System.Drawing.Point(32, 148);
+            this.name_input.Location = new System.Drawing.Point(412, 168);
             this.name_input.Multiline = true;
             this.name_input.Name = "name_input";
             this.name_input.Size = new System.Drawing.Size(300, 25);
@@ -328,12 +328,12 @@ namespace DB_PROJECT
             this.pass_input.Name = "pass_input";
             this.pass_input.PasswordChar = '*';
             this.pass_input.Size = new System.Drawing.Size(300, 13);
-            this.pass_input.TabIndex = 5;
+            this.pass_input.TabIndex = 4;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(32, 174);
+            this.panel6.Location = new System.Drawing.Point(412, 194);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(300, 2);
             this.panel6.TabIndex = 5;
@@ -435,7 +435,7 @@ namespace DB_PROJECT
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Black;
-            this.panel7.Location = new System.Drawing.Point(412, 174);
+            this.panel7.Location = new System.Drawing.Point(32, 194);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(280, 2);
             this.panel7.TabIndex = 5;
@@ -456,7 +456,7 @@ namespace DB_PROJECT
             this.cnfrm_pass_input.Name = "cnfrm_pass_input";
             this.cnfrm_pass_input.PasswordChar = '*';
             this.cnfrm_pass_input.Size = new System.Drawing.Size(280, 13);
-            this.cnfrm_pass_input.TabIndex = 6;
+            this.cnfrm_pass_input.TabIndex = 5;
             // 
             // confirm_pass
             // 
@@ -478,17 +478,17 @@ namespace DB_PROJECT
             this.Address_input.Multiline = true;
             this.Address_input.Name = "Address_input";
             this.Address_input.Size = new System.Drawing.Size(280, 25);
-            this.Address_input.TabIndex = 4;
+            this.Address_input.TabIndex = 3;
             // 
             // email_input
             // 
             this.email_input.BackColor = System.Drawing.Color.White;
             this.email_input.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.email_input.Location = new System.Drawing.Point(412, 148);
+            this.email_input.Location = new System.Drawing.Point(32, 168);
             this.email_input.Multiline = true;
             this.email_input.Name = "email_input";
             this.email_input.Size = new System.Drawing.Size(280, 25);
-            this.email_input.TabIndex = 2;
+            this.email_input.TabIndex = 0;
             // 
             // phone_number_input
             // 
@@ -498,7 +498,7 @@ namespace DB_PROJECT
             this.phone_number_input.Multiline = true;
             this.phone_number_input.Name = "phone_number_input";
             this.phone_number_input.Size = new System.Drawing.Size(300, 25);
-            this.phone_number_input.TabIndex = 3;
+            this.phone_number_input.TabIndex = 2;
             // 
             // address_lbl
             // 
@@ -518,7 +518,7 @@ namespace DB_PROJECT
             this.email_lbl.BackColor = System.Drawing.Color.Transparent;
             this.email_lbl.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email_lbl.ForeColor = System.Drawing.Color.Black;
-            this.email_lbl.Location = new System.Drawing.Point(409, 117);
+            this.email_lbl.Location = new System.Drawing.Point(29, 137);
             this.email_lbl.Name = "email_lbl";
             this.email_lbl.Size = new System.Drawing.Size(48, 18);
             this.email_lbl.TabIndex = 0;
@@ -704,9 +704,9 @@ namespace DB_PROJECT
             this.Controls.Add(this.close_picture);
             this.Controls.Add(this.minimize_pictureBox);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.SignUp_panel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel_Forget_pass);
-            this.Controls.Add(this.SignUp_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main_Screen";
