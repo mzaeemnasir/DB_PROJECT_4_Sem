@@ -81,6 +81,7 @@ namespace DB_PROJECT
             SignUp_panel.Show();
         }
 
+        // Password Reset Function 
         private void button2_Click(object sender, EventArgs e)
         {
             if(String.IsNullOrEmpty(rst_pas_eml_inpt.Text) && String.IsNullOrEmpty(rst_pas_ph_no_input.Text))
