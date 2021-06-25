@@ -249,24 +249,26 @@ namespace DB_PROJECT
             // 
             this.password.BackColor = System.Drawing.Color.White;
             this.password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.password.Location = new System.Drawing.Point(41, 284);
-            this.password.Multiline = true;
+            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password.Location = new System.Drawing.Point(41, 281);
             this.password.Name = "password";
             this.password.PasswordChar = '*';
-            this.password.Size = new System.Drawing.Size(337, 26);
+            this.password.Size = new System.Drawing.Size(337, 22);
             this.password.TabIndex = 2;
             this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.password_KeyPress);
             // 
             // Email
             // 
             this.Email.BackColor = System.Drawing.Color.White;
             this.Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Email.Location = new System.Drawing.Point(41, 165);
-            this.Email.Multiline = true;
+            this.Email.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.Location = new System.Drawing.Point(41, 152);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(337, 25);
             this.Email.TabIndex = 1;
             this.Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Email.TextChanged += new System.EventHandler(this.Email_TextChanged);
             // 
             // label2
             // 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DB_PROJECT
 {
@@ -15,6 +16,8 @@ namespace DB_PROJECT
         int move;
         int X_axis;
         int Y_axis;
+
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=BookRack;Integrated Security=True");
         public Main_Screen()
         {
             InitializeComponent();
@@ -146,13 +149,55 @@ namespace DB_PROJECT
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Form4 f4 = new Form4();
-            f4.Show();
+
+        // Opening the connection with the database
+
+            con.Open();
+            // SQL - Server Query
+            string query_text = @"SELECT * FROM BookRack.dbo.User_information Where email = '"+Email.Text+"' AND userPassword = '"+password.Text+"' ";
+            SqlDataAdapter query = new SqlDataAdapter(query_text,con);
+
+        //creating virtual table For Password or Email Validation
+
+            DataTable dataTable = new DataTable();
+            query.Fill(dataTable);
+
+        // When Successfully LOGED IN
+
+            if(dataTable.Rows.Count == 1)
+            {
+                MessageBox.Show(Email.Text);
+                MessageBox.Show("Successfully Login \n");
+                MessageBox.Show(query_text);
+                Form4 f4 = new Form4();
+                f4.Show();
+            }
+
+        // Error While Loged in 
+            else
+            {
+                MessageBox.Show("Please Check You Email or Password \n");
+            }
+
+        // Closing the connection with the database
+
+            con.Close();
         }
 
         private void SignUp_panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            button1_Click(sender,e);
         }
     }
 }
