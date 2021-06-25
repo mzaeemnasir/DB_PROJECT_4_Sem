@@ -76,10 +76,10 @@ namespace DB_PROJECT
             this.button2 = new System.Windows.Forms.Button();
             this.Email_Panel_FP = new System.Windows.Forms.Panel();
             this.UserName_panel = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.rst_pas_eml_inpt = new System.Windows.Forms.TextBox();
+            this.rst_pas_ph_no_input = new System.Windows.Forms.TextBox();
+            this.email_lbl2 = new System.Windows.Forms.Label();
+            this.Rst_pas_Phn_lbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize_pictureBox)).BeginInit();
             this.panel3.SuspendLayout();
@@ -578,10 +578,10 @@ namespace DB_PROJECT
             this.panel_Forget_pass.Controls.Add(this.button2);
             this.panel_Forget_pass.Controls.Add(this.Email_Panel_FP);
             this.panel_Forget_pass.Controls.Add(this.UserName_panel);
-            this.panel_Forget_pass.Controls.Add(this.textBox3);
-            this.panel_Forget_pass.Controls.Add(this.textBox4);
-            this.panel_Forget_pass.Controls.Add(this.label12);
-            this.panel_Forget_pass.Controls.Add(this.label15);
+            this.panel_Forget_pass.Controls.Add(this.rst_pas_eml_inpt);
+            this.panel_Forget_pass.Controls.Add(this.rst_pas_ph_no_input);
+            this.panel_Forget_pass.Controls.Add(this.email_lbl2);
+            this.panel_Forget_pass.Controls.Add(this.Rst_pas_Phn_lbl);
             this.panel_Forget_pass.Location = new System.Drawing.Point(291, 119);
             this.panel_Forget_pass.Name = "panel_Forget_pass";
             this.panel_Forget_pass.Size = new System.Drawing.Size(423, 431);
@@ -643,51 +643,54 @@ namespace DB_PROJECT
             this.UserName_panel.Size = new System.Drawing.Size(337, 2);
             this.UserName_panel.TabIndex = 5;
             // 
-            // textBox3
+            // rst_pas_eml_inpt
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(41, 245);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(337, 26);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.rst_pas_eml_inpt.BackColor = System.Drawing.Color.White;
+            this.rst_pas_eml_inpt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rst_pas_eml_inpt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rst_pas_eml_inpt.Location = new System.Drawing.Point(41, 154);
+            this.rst_pas_eml_inpt.Multiline = true;
+            this.rst_pas_eml_inpt.Name = "rst_pas_eml_inpt";
+            this.rst_pas_eml_inpt.Size = new System.Drawing.Size(337, 26);
+            this.rst_pas_eml_inpt.TabIndex = 0;
+            this.rst_pas_eml_inpt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
+            // rst_pas_ph_no_input
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(41, 165);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(337, 25);
-            this.textBox4.TabIndex = 1;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.rst_pas_ph_no_input.BackColor = System.Drawing.Color.White;
+            this.rst_pas_ph_no_input.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rst_pas_ph_no_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rst_pas_ph_no_input.Location = new System.Drawing.Point(41, 239);
+            this.rst_pas_ph_no_input.Name = "rst_pas_ph_no_input";
+            this.rst_pas_ph_no_input.Size = new System.Drawing.Size(337, 22);
+            this.rst_pas_ph_no_input.TabIndex = 1;
+            this.rst_pas_ph_no_input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.rst_pas_ph_no_input.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rst_pas_ph_no_input_KeyPress);
             // 
-            // label12
+            // email_lbl2
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(38, 209);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 18);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Email";
+            this.email_lbl2.AutoSize = true;
+            this.email_lbl2.BackColor = System.Drawing.Color.Transparent;
+            this.email_lbl2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email_lbl2.ForeColor = System.Drawing.Color.Black;
+            this.email_lbl2.Location = new System.Drawing.Point(38, 120);
+            this.email_lbl2.Name = "email_lbl2";
+            this.email_lbl2.Size = new System.Drawing.Size(48, 18);
+            this.email_lbl2.TabIndex = 0;
+            this.email_lbl2.Text = "Email";
             // 
-            // label15
+            // Rst_pas_Phn_lbl
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(38, 131);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(88, 18);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "User Name";
+            this.Rst_pas_Phn_lbl.AutoSize = true;
+            this.Rst_pas_Phn_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.Rst_pas_Phn_lbl.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rst_pas_Phn_lbl.ForeColor = System.Drawing.Color.Black;
+            this.Rst_pas_Phn_lbl.Location = new System.Drawing.Point(38, 205);
+            this.Rst_pas_Phn_lbl.Name = "Rst_pas_Phn_lbl";
+            this.Rst_pas_Phn_lbl.Size = new System.Drawing.Size(120, 18);
+            this.Rst_pas_Phn_lbl.TabIndex = 0;
+            this.Rst_pas_Phn_lbl.Text = "Phone Number:";
+            this.Rst_pas_Phn_lbl.Click += new System.EventHandler(this.Rst_pas_Phn_lbl_Click);
             // 
             // Main_Screen
             // 
@@ -704,9 +707,9 @@ namespace DB_PROJECT
             this.Controls.Add(this.close_picture);
             this.Controls.Add(this.minimize_pictureBox);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.SignUp_panel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel_Forget_pass);
+            this.Controls.Add(this.SignUp_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main_Screen";
@@ -763,10 +766,10 @@ namespace DB_PROJECT
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel Email_Panel_FP;
         private System.Windows.Forms.Panel UserName_panel;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox rst_pas_eml_inpt;
+        private System.Windows.Forms.TextBox rst_pas_ph_no_input;
+        private System.Windows.Forms.Label email_lbl2;
+        private System.Windows.Forms.Label Rst_pas_Phn_lbl;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox login_img;

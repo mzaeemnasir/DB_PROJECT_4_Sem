@@ -83,7 +83,29 @@ namespace DB_PROJECT
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if(String.IsNullOrEmpty(rst_pas_eml_inpt.Text) && String.IsNullOrEmpty(rst_pas_ph_no_input.Text))
+            {
+                MessageBox.Show("Please Input all details");
+            }
+            else
+            {
+                con.Open();
+                // Reseting the Password 
+                string query_txt = @"SELECT * FROM BookRack.dbo.User_information Where email = '" +rst_pas_eml_inpt.Text+ "' AND userPhone = '"+rst_pas_ph_no_input.Text+"' ";
+                SqlCommand query = new SqlCommand(query_txt, con);
+                SqlDataReader Reader = query.ExecuteReader();
+                if(Reader.Read())
+                {
+                    string pass = Reader["userPassword"].ToString();
+                    MessageBox.Show("Your Password is: " + pass);
+                }
+                else
+                {
+                    MessageBox.Show("No Data Found");
+                }
+                // Closing the database Connection to the Server
+                con.Close();
+            }
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -95,6 +117,7 @@ namespace DB_PROJECT
         private void label10_Click(object sender, EventArgs e)
         {
             panel_Forget_pass.BringToFront();
+
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -183,9 +206,8 @@ namespace DB_PROJECT
 
             if(dataTable.Rows.Count == 1)
             {
-                MessageBox.Show(Email.Text);
                 MessageBox.Show("Successfully Login \n");
-                MessageBox.Show(query_text);
+                this.Hide();
                 Form4 f4 = new Form4();
                 f4.Show();
             }
@@ -215,6 +237,19 @@ namespace DB_PROJECT
         {
             if(e.KeyChar == 13)
             button1_Click(sender,e);
+        }
+
+        private void Rst_pas_Phn_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rst_pas_ph_no_input_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                button2_Click(sender, e);
+            }
         }
     }
 }
