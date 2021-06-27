@@ -45,10 +45,14 @@ namespace DB_PROJECT
                 {
                    file_location = @"G: \UNIVERSITY\Smester no. 4\DB LAB\DB PROJECT\user_images\defautavatar.png";
                     profilePicture.ImageLocation = file_location;
+                    update_profile_picture.ImageLocation = file_location;
+                    update_profile_picture.SizeMode = PictureBoxSizeMode.Zoom;
                     profilePicture.SizeMode = PictureBoxSizeMode.Zoom;
                 }
                 else
                 {
+                    update_profile_picture.ImageLocation = file_location;
+                    update_profile_picture.SizeMode = PictureBoxSizeMode.Zoom;
                     profilePicture.ImageLocation = file_location;
                     profilePicture.SizeMode = PictureBoxSizeMode.Zoom;
                 }
@@ -179,6 +183,26 @@ namespace DB_PROJECT
 
         private void Upload_picture_lbl_Click(object sender, EventArgs e)
         {
+            OpenFileDialog upload_profile_pic = new OpenFileDialog();
+            upload_profile_pic.Title = "Select Profile Picture ";
+            upload_profile_pic.Filter = "Image Files(*.JPEG;*.JPG;*.PNG)|*.JPG;*.PNG;*.JPEG;";
+            if(upload_profile_pic.ShowDialog() == DialogResult.OK)
+            {
+                // updating the user image to our database 
+                con.Open();
+                string file_location = upload_profile_pic.FileName;
+                string query_txt = @"Update User_information Set userImage = '"+file_location+"' where email = '"+userEmail+"' ";
+                SqlCommand query = new SqlCommand(query_txt,con);
+                query.ExecuteNonQuery();
+                con.Close();
+
+                //now refreshing the profile picturess
+                profilePicture.ImageLocation = file_location;
+                update_profile_picture.ImageLocation = file_location;
+                update_profile_picture.SizeMode = PictureBoxSizeMode.Zoom;
+                profilePicture.SizeMode = PictureBoxSizeMode.Zoom;
+
+            }
 
         }
 
