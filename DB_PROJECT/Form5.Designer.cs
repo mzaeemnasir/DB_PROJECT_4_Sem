@@ -42,9 +42,9 @@ namespace DB_PROJECT
             this.profilePicture = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.edit_profile = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.search_img = new System.Windows.Forms.PictureBox();
             this.Upload_picture_lbl = new System.Windows.Forms.Label();
             this.profile_panel = new System.Windows.Forms.Panel();
             this.disclamer_email = new System.Windows.Forms.Label();
@@ -73,21 +73,23 @@ namespace DB_PROJECT
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.genre_llbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.search_input = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.genre_llbl = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -98,8 +100,8 @@ namespace DB_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search_img)).BeginInit();
             this.profile_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.update_profile_picture)).BeginInit();
             this.password_chng_panel.SuspendLayout();
@@ -109,8 +111,9 @@ namespace DB_PROJECT
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(861, 548);
+            this.pictureBox4.Location = new System.Drawing.Point(16, 548);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(48, 49);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -120,8 +123,9 @@ namespace DB_PROJECT
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(915, 548);
+            this.pictureBox1.Location = new System.Drawing.Point(70, 548);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(57, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -131,8 +135,9 @@ namespace DB_PROJECT
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(978, 552);
+            this.pictureBox2.Location = new System.Drawing.Point(133, 552);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 45);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -209,6 +214,9 @@ namespace DB_PROJECT
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.edit_profile);
             this.panel2.Controls.Add(this.pictureBox6);
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(202, 619);
@@ -232,7 +240,7 @@ namespace DB_PROJECT
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(52, 302);
+            this.label3.Location = new System.Drawing.Point(52, 402);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 26);
             this.label3.TabIndex = 20;
@@ -253,6 +261,17 @@ namespace DB_PROJECT
             this.edit_profile.Text = "Edit Profile";
             this.edit_profile.Click += new System.EventHandler(this.edit_profile_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(4, 395);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(44, 39);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 19;
+            this.pictureBox6.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -266,27 +285,16 @@ namespace DB_PROJECT
             this.label2.Text = "Discover the book you\'ll love";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // pictureBox7
+            // search_img
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(512, 215);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(46, 39);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 19;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(4, 295);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(44, 39);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 19;
-            this.pictureBox6.TabStop = false;
+            this.search_img.BackColor = System.Drawing.Color.Transparent;
+            this.search_img.Image = ((System.Drawing.Image)(resources.GetObject("search_img.Image")));
+            this.search_img.Location = new System.Drawing.Point(512, 215);
+            this.search_img.Name = "search_img";
+            this.search_img.Size = new System.Drawing.Size(46, 39);
+            this.search_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.search_img.TabIndex = 19;
+            this.search_img.TabStop = false;
             // 
             // Upload_picture_lbl
             // 
@@ -318,7 +326,7 @@ namespace DB_PROJECT
             this.profile_panel.Controls.Add(this.profle_name_lbl);
             this.profile_panel.Controls.Add(this.profile_name_lbl);
             this.profile_panel.Controls.Add(this.Upload_picture_lbl);
-            this.profile_panel.Location = new System.Drawing.Point(202, 34);
+            this.profile_panel.Location = new System.Drawing.Point(202, 35);
             this.profile_panel.Name = "profile_panel";
             this.profile_panel.Size = new System.Drawing.Size(823, 574);
             this.profile_panel.TabIndex = 21;
@@ -481,7 +489,6 @@ namespace DB_PROJECT
             // password_chng_panel
             // 
             this.password_chng_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.password_chng_panel.Controls.Add(this.panel3);
             this.password_chng_panel.Controls.Add(this.pictureBox8);
             this.password_chng_panel.Controls.Add(this.show_pass_boX);
             this.password_chng_panel.Controls.Add(this.label5);
@@ -493,7 +500,7 @@ namespace DB_PROJECT
             this.password_chng_panel.Controls.Add(this.save_changes_pass_chng);
             this.password_chng_panel.Controls.Add(this.label12);
             this.password_chng_panel.Controls.Add(this.label11);
-            this.password_chng_panel.Location = new System.Drawing.Point(203, 35);
+            this.password_chng_panel.Location = new System.Drawing.Point(202, 35);
             this.password_chng_panel.Name = "password_chng_panel";
             this.password_chng_panel.Size = new System.Drawing.Size(823, 574);
             this.password_chng_panel.TabIndex = 21;
@@ -631,9 +638,10 @@ namespace DB_PROJECT
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.panel6);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.search_input);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label10);
@@ -642,100 +650,48 @@ namespace DB_PROJECT
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.pictureBox7);
+            this.panel3.Controls.Add(this.search_img);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.comboBox2);
             this.panel3.Controls.Add(this.genre_llbl);
             this.panel3.Controls.Add(this.comboBox1);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Location = new System.Drawing.Point(202, 35);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(822, 574);
             this.panel3.TabIndex = 24;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // comboBox1
+            // panel7
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(119, 82);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.ForeColor = System.Drawing.Color.Black;
+            this.panel7.Location = new System.Drawing.Point(252, 529);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 2);
+            this.panel7.TabIndex = 6;
             // 
-            // genre_llbl
+            // panel6
             // 
-            this.genre_llbl.AutoSize = true;
-            this.genre_llbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genre_llbl.Location = new System.Drawing.Point(39, 78);
-            this.genre_llbl.Name = "genre_llbl";
-            this.genre_llbl.Size = new System.Drawing.Size(66, 25);
-            this.genre_llbl.TabIndex = 1;
-            this.genre_llbl.Text = "Genre";
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(277, 367);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(100, 2);
+            this.panel6.TabIndex = 5;
             // 
-            // label1
+            // search_input
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(660, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Popular Subjets";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(636, 90);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 484);
-            this.panel4.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(648, 131);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 68);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Science Fiction";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(648, 249);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 68);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Adventure Stories";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(648, 363);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(162, 68);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Love Stories";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(648, 473);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(162, 68);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Time Travel";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Malgun Gothic Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(287, 312);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 32);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Quote";
+            this.search_input.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.search_input.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.search_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.search_input.Location = new System.Drawing.Point(165, 216);
+            this.search_input.Name = "search_input";
+            this.search_input.Size = new System.Drawing.Size(313, 31);
+            this.search_input.TabIndex = 0;
+            this.search_input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel5
             // 
@@ -744,18 +700,6 @@ namespace DB_PROJECT
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(313, 2);
             this.panel5.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(165, 216);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(313, 31);
-            this.textBox1.TabIndex = 21;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -770,23 +714,6 @@ namespace DB_PROJECT
     "ies of your \r\nenvironment.";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(277, 367);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(100, 2);
-            this.panel6.TabIndex = 5;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Black;
-            this.panel7.ForeColor = System.Drawing.Color.Black;
-            this.panel7.Location = new System.Drawing.Point(252, 529);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 2);
-            this.panel7.TabIndex = 6;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -797,6 +724,107 @@ namespace DB_PROJECT
             this.label10.Size = new System.Drawing.Size(163, 24);
             this.label10.TabIndex = 5;
             this.label10.Text = "Marshall McLuhan";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Malgun Gothic Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Teal;
+            this.label6.Location = new System.Drawing.Point(287, 312);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 32);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Quote";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(648, 473);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(162, 68);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Time Travel";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(648, 363);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(162, 68);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Love Stories";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(648, 249);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(162, 68);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Adventure Stories";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(648, 131);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(162, 68);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Science Fiction";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(636, 90);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(3, 484);
+            this.panel4.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(660, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Popular Subjets";
+            // 
+            // genre_llbl
+            // 
+            this.genre_llbl.AutoSize = true;
+            this.genre_llbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genre_llbl.Location = new System.Drawing.Point(39, 79);
+            this.genre_llbl.Name = "genre_llbl";
+            this.genre_llbl.Size = new System.Drawing.Size(66, 25);
+            this.genre_llbl.TabIndex = 1;
+            this.genre_llbl.Text = "Genre";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(119, 82);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(126, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(382, 82);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(126, 21);
+            this.comboBox2.TabIndex = 6;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(299, 78);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(73, 25);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Format";
             // 
             // Form5
             // 
@@ -810,10 +838,8 @@ namespace DB_PROJECT
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.close_picture);
             this.Controls.Add(this.minimize_pictureBox);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.password_chng_panel);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.profile_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form5";
@@ -830,8 +856,8 @@ namespace DB_PROJECT
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search_img)).EndInit();
             this.profile_panel.ResumeLayout(false);
             this.profile_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.update_profile_picture)).EndInit();
@@ -855,7 +881,7 @@ namespace DB_PROJECT
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox search_img;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -899,10 +925,12 @@ namespace DB_PROJECT
         private System.Windows.Forms.Label genre_llbl;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox search_input;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
