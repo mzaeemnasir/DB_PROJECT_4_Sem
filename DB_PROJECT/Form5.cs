@@ -104,6 +104,142 @@ namespace DB_PROJECT
 
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3 f3 = new Form3();
+            f3.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            profile_panel.Hide();
+            password_chng_panel.Show();
+        }
+
+        private void email_txbox_disabled_TextChanged(object sender, EventArgs e)
+        {
+            email_txbox_disabled.Enabled = true;
+            email_txbox_disabled.ReadOnly = false;
+            email_txbox_disabled.Text = userEmail;
+            email_txbox_disabled.ReadOnly = true;
+            email_txbox_disabled.Enabled = false;
+        }
+
+        private void profile_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void save_changes_pass_chng_Click(object sender, EventArgs e)
+        {
+            // if the inputed passwords are correct then chnge the password in the database 
+            if(password_input.Text == cnfrm_pas_input.Text && String.IsNullOrEmpty(password_input.ToString()))
+            {
+                con.Open();
+                string query_txt = @"Update User_information Set userPassword = '" +password_input.Text+"'  where email = '"+userEmail+"'";
+                SqlCommand query = new SqlCommand(query_txt, con);
+                query.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Your Password has been Updated");
+            }
+            else
+            {
+                MessageBox.Show("Please check You Password");
+            }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            password_chng_panel.Hide();
+            profile_panel.Show();
+        }
+
+        private void show_pass_boX_CheckedChanged(object sender, EventArgs e)
+        {
+            // if the check box is checked then simply show the password
+            if(show_pass_boX.Checked)
+            {
+                password_input.PasswordChar = '\0';
+                cnfrm_pas_input.PasswordChar = '\0';
+            }
+
+            // or else simple hide the password when the check box is unchecked
+            else if (!show_pass_boX.Checked)
+            {
+                password_input.PasswordChar = '*';
+                cnfrm_pas_input.PasswordChar = '*';
+            }
+        }
+
+        private void Upload_picture_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancel_button_Click(object sender, EventArgs e)
+        {
+            profile_panel.Hide();
+        }
+
+        private void save_changes_btn_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            // if the Profile name is not empty then update it in our data base
+            if(profile_name_input.Text != "")
+            {
+                con.Open();
+                string query_txt = @"Update User_information Set fullName = '"+profile_name_input.Text+"' where email = '"+userEmail+"' ";
+                SqlCommand query = new SqlCommand(query_txt,con);
+                query.ExecuteNonQuery();
+                con.Close();
+                i++;
+            }
+            if(profie_address_input.Text != "")
+            {
+                con.Open();
+                string query_txt = @"Update User_information Set userAddress = '" +profie_address_input.Text + "' where email = '" + userEmail + "' ";
+                SqlCommand query = new SqlCommand(query_txt, con);
+                query.ExecuteNonQuery();
+                con.Close();
+                i++;
+            }
+            if (profile_ph_input.Text != "")
+            {
+                con.Open();
+                string query_txt = @"Update User_information Set userPhone = '" + profile_ph_input.Text + "' where email = '" + userEmail + "' ";
+                SqlCommand query = new SqlCommand(query_txt, con);
+                query.ExecuteNonQuery();
+                con.Close();
+                i++; 
+            }
+            if(i >0)
+            {
+                MessageBox.Show("Changes Saved!!!");
+            }
+            else if(i == 0)
+            {
+                MessageBox.Show("Please input data for changes");
+            }
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            password_chng_panel.Hide();
+            profile_panel.Show();
+            profile_panel.BringToFront();
+        }
+
+        private void update_profile_picture_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void profilePicture_Click(object sender, EventArgs e)
         {
 

@@ -42,9 +42,35 @@ namespace DB_PROJECT
             this.profilePicture = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.Upload_picture_lbl = new System.Windows.Forms.Label();
+            this.profile_panel = new System.Windows.Forms.Panel();
+            this.disclamer_email = new System.Windows.Forms.Label();
+            this.email_txbox_disabled = new System.Windows.Forms.TextBox();
+            this.profile_ph_input = new System.Windows.Forms.TextBox();
+            this.profie_address_input = new System.Windows.Forms.TextBox();
+            this.profile_name_input = new System.Windows.Forms.TextBox();
+            this.update_profile_picture = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cancel_button = new System.Windows.Forms.Label();
+            this.save_changes_btn = new System.Windows.Forms.Label();
+            this.change_password_btn = new System.Windows.Forms.Label();
+            this.profile_phone_lbl = new System.Windows.Forms.Label();
+            this.profle_name_lbl = new System.Windows.Forms.Label();
+            this.profile_name_lbl = new System.Windows.Forms.Label();
+            this.password_chng_panel = new System.Windows.Forms.Panel();
+            this.show_pass_boX = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Email_box_disabled_cng_pass = new System.Windows.Forms.TextBox();
+            this.cnfrm_pas_input = new System.Windows.Forms.TextBox();
+            this.password_input = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.save_changes_pass_chng = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,6 +83,10 @@ namespace DB_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.profile_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.update_profile_picture)).BeginInit();
+            this.password_chng_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -160,7 +190,6 @@ namespace DB_PROJECT
             this.panel2.Controls.Add(this.profilePicture);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox7);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -186,11 +215,12 @@ namespace DB_PROJECT
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(62, 448);
+            this.label3.Location = new System.Drawing.Point(52, 327);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 26);
             this.label3.TabIndex = 20;
             this.label3.Text = "Upload Book";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -198,23 +228,12 @@ namespace DB_PROJECT
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(52, 209);
+            this.label2.Location = new System.Drawing.Point(52, 208);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 26);
             this.label2.TabIndex = 20;
             this.label2.Text = "Search Book";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(48, 122);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 21);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Edit Profile";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox7
             // 
@@ -230,11 +249,350 @@ namespace DB_PROJECT
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 433);
+            this.pictureBox6.Location = new System.Drawing.Point(4, 321);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(57, 54);
+            this.pictureBox6.Size = new System.Drawing.Size(44, 39);
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
+            // 
+            // Upload_picture_lbl
+            // 
+            this.Upload_picture_lbl.AutoSize = true;
+            this.Upload_picture_lbl.BackColor = System.Drawing.Color.DarkRed;
+            this.Upload_picture_lbl.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Upload_picture_lbl.ForeColor = System.Drawing.Color.White;
+            this.Upload_picture_lbl.Location = new System.Drawing.Point(9, 138);
+            this.Upload_picture_lbl.Name = "Upload_picture_lbl";
+            this.Upload_picture_lbl.Size = new System.Drawing.Size(162, 27);
+            this.Upload_picture_lbl.TabIndex = 20;
+            this.Upload_picture_lbl.Text = "Change Image";
+            this.Upload_picture_lbl.Click += new System.EventHandler(this.Upload_picture_lbl_Click);
+            // 
+            // profile_panel
+            // 
+            this.profile_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.profile_panel.Controls.Add(this.disclamer_email);
+            this.profile_panel.Controls.Add(this.email_txbox_disabled);
+            this.profile_panel.Controls.Add(this.profile_ph_input);
+            this.profile_panel.Controls.Add(this.profie_address_input);
+            this.profile_panel.Controls.Add(this.profile_name_input);
+            this.profile_panel.Controls.Add(this.update_profile_picture);
+            this.profile_panel.Controls.Add(this.label4);
+            this.profile_panel.Controls.Add(this.cancel_button);
+            this.profile_panel.Controls.Add(this.save_changes_btn);
+            this.profile_panel.Controls.Add(this.change_password_btn);
+            this.profile_panel.Controls.Add(this.profile_phone_lbl);
+            this.profile_panel.Controls.Add(this.profle_name_lbl);
+            this.profile_panel.Controls.Add(this.profile_name_lbl);
+            this.profile_panel.Controls.Add(this.Upload_picture_lbl);
+            this.profile_panel.Location = new System.Drawing.Point(202, 34);
+            this.profile_panel.Name = "profile_panel";
+            this.profile_panel.Size = new System.Drawing.Size(823, 574);
+            this.profile_panel.TabIndex = 21;
+            this.profile_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.profile_panel_Paint);
+            // 
+            // disclamer_email
+            // 
+            this.disclamer_email.AutoSize = true;
+            this.disclamer_email.Location = new System.Drawing.Point(459, 131);
+            this.disclamer_email.Name = "disclamer_email";
+            this.disclamer_email.Size = new System.Drawing.Size(128, 13);
+            this.disclamer_email.TabIndex = 22;
+            this.disclamer_email.Text = "You cannot change email";
+            // 
+            // email_txbox_disabled
+            // 
+            this.email_txbox_disabled.Enabled = false;
+            this.email_txbox_disabled.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email_txbox_disabled.ForeColor = System.Drawing.Color.Silver;
+            this.email_txbox_disabled.Location = new System.Drawing.Point(263, 90);
+            this.email_txbox_disabled.Name = "email_txbox_disabled";
+            this.email_txbox_disabled.ReadOnly = true;
+            this.email_txbox_disabled.Size = new System.Drawing.Size(324, 38);
+            this.email_txbox_disabled.TabIndex = 21;
+            this.email_txbox_disabled.Text = "your-email";
+            this.email_txbox_disabled.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.email_txbox_disabled.TextChanged += new System.EventHandler(this.email_txbox_disabled_TextChanged);
+            // 
+            // profile_ph_input
+            // 
+            this.profile_ph_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_ph_input.Location = new System.Drawing.Point(263, 418);
+            this.profile_ph_input.Name = "profile_ph_input";
+            this.profile_ph_input.Size = new System.Drawing.Size(324, 38);
+            this.profile_ph_input.TabIndex = 21;
+            // 
+            // profie_address_input
+            // 
+            this.profie_address_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profie_address_input.Location = new System.Drawing.Point(263, 313);
+            this.profie_address_input.Name = "profie_address_input";
+            this.profie_address_input.Size = new System.Drawing.Size(324, 38);
+            this.profie_address_input.TabIndex = 21;
+            // 
+            // profile_name_input
+            // 
+            this.profile_name_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_name_input.Location = new System.Drawing.Point(263, 210);
+            this.profile_name_input.Name = "profile_name_input";
+            this.profile_name_input.Size = new System.Drawing.Size(324, 38);
+            this.profile_name_input.TabIndex = 21;
+            // 
+            // update_profile_picture
+            // 
+            this.update_profile_picture.BackColor = System.Drawing.Color.Transparent;
+            this.update_profile_picture.Image = ((System.Drawing.Image)(resources.GetObject("update_profile_picture.Image")));
+            this.update_profile_picture.Location = new System.Drawing.Point(11, 16);
+            this.update_profile_picture.Name = "update_profile_picture";
+            this.update_profile_picture.Size = new System.Drawing.Size(157, 106);
+            this.update_profile_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.update_profile_picture.TabIndex = 19;
+            this.update_profile_picture.TabStop = false;
+            this.update_profile_picture.Click += new System.EventHandler(this.update_profile_picture_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.DarkRed;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(204, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 27);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Email";
+            this.label4.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // cancel_button
+            // 
+            this.cancel_button.AutoSize = true;
+            this.cancel_button.BackColor = System.Drawing.Color.DarkRed;
+            this.cancel_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancel_button.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancel_button.ForeColor = System.Drawing.Color.White;
+            this.cancel_button.Location = new System.Drawing.Point(692, 514);
+            this.cancel_button.Name = "cancel_button";
+            this.cancel_button.Size = new System.Drawing.Size(80, 27);
+            this.cancel_button.TabIndex = 20;
+            this.cancel_button.Text = "Cancel";
+            this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
+            // 
+            // save_changes_btn
+            // 
+            this.save_changes_btn.AutoSize = true;
+            this.save_changes_btn.BackColor = System.Drawing.Color.DarkRed;
+            this.save_changes_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.save_changes_btn.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_changes_btn.ForeColor = System.Drawing.Color.White;
+            this.save_changes_btn.Location = new System.Drawing.Point(654, 455);
+            this.save_changes_btn.Name = "save_changes_btn";
+            this.save_changes_btn.Size = new System.Drawing.Size(154, 27);
+            this.save_changes_btn.TabIndex = 20;
+            this.save_changes_btn.Text = "Save Changes";
+            this.save_changes_btn.Click += new System.EventHandler(this.save_changes_btn_Click);
+            // 
+            // change_password_btn
+            // 
+            this.change_password_btn.AutoSize = true;
+            this.change_password_btn.BackColor = System.Drawing.Color.DarkRed;
+            this.change_password_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.change_password_btn.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.change_password_btn.ForeColor = System.Drawing.Color.White;
+            this.change_password_btn.Location = new System.Drawing.Point(333, 505);
+            this.change_password_btn.Name = "change_password_btn";
+            this.change_password_btn.Size = new System.Drawing.Size(196, 27);
+            this.change_password_btn.TabIndex = 20;
+            this.change_password_btn.Text = "Change Password";
+            this.change_password_btn.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // profile_phone_lbl
+            // 
+            this.profile_phone_lbl.AutoSize = true;
+            this.profile_phone_lbl.BackColor = System.Drawing.Color.DarkRed;
+            this.profile_phone_lbl.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_phone_lbl.ForeColor = System.Drawing.Color.White;
+            this.profile_phone_lbl.Location = new System.Drawing.Point(199, 381);
+            this.profile_phone_lbl.Name = "profile_phone_lbl";
+            this.profile_phone_lbl.Size = new System.Drawing.Size(79, 27);
+            this.profile_phone_lbl.TabIndex = 20;
+            this.profile_phone_lbl.Text = "Phone";
+            this.profile_phone_lbl.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // profle_name_lbl
+            // 
+            this.profle_name_lbl.AutoSize = true;
+            this.profle_name_lbl.BackColor = System.Drawing.Color.DarkRed;
+            this.profle_name_lbl.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profle_name_lbl.ForeColor = System.Drawing.Color.White;
+            this.profle_name_lbl.Location = new System.Drawing.Point(199, 276);
+            this.profle_name_lbl.Name = "profle_name_lbl";
+            this.profle_name_lbl.Size = new System.Drawing.Size(94, 27);
+            this.profle_name_lbl.TabIndex = 20;
+            this.profle_name_lbl.Text = "Address";
+            this.profle_name_lbl.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // profile_name_lbl
+            // 
+            this.profile_name_lbl.AutoSize = true;
+            this.profile_name_lbl.BackColor = System.Drawing.Color.DarkRed;
+            this.profile_name_lbl.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_name_lbl.ForeColor = System.Drawing.Color.White;
+            this.profile_name_lbl.Location = new System.Drawing.Point(199, 173);
+            this.profile_name_lbl.Name = "profile_name_lbl";
+            this.profile_name_lbl.Size = new System.Drawing.Size(73, 27);
+            this.profile_name_lbl.TabIndex = 20;
+            this.profile_name_lbl.Text = "Name";
+            this.profile_name_lbl.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // password_chng_panel
+            // 
+            this.password_chng_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.password_chng_panel.Controls.Add(this.pictureBox8);
+            this.password_chng_panel.Controls.Add(this.show_pass_boX);
+            this.password_chng_panel.Controls.Add(this.label5);
+            this.password_chng_panel.Controls.Add(this.Email_box_disabled_cng_pass);
+            this.password_chng_panel.Controls.Add(this.cnfrm_pas_input);
+            this.password_chng_panel.Controls.Add(this.password_input);
+            this.password_chng_panel.Controls.Add(this.label8);
+            this.password_chng_panel.Controls.Add(this.label9);
+            this.password_chng_panel.Controls.Add(this.save_changes_pass_chng);
+            this.password_chng_panel.Controls.Add(this.label12);
+            this.password_chng_panel.Controls.Add(this.label11);
+            this.password_chng_panel.Location = new System.Drawing.Point(203, 35);
+            this.password_chng_panel.Name = "password_chng_panel";
+            this.password_chng_panel.Size = new System.Drawing.Size(823, 574);
+            this.password_chng_panel.TabIndex = 21;
+            this.password_chng_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.profile_panel_Paint);
+            // 
+            // show_pass_boX
+            // 
+            this.show_pass_boX.AutoSize = true;
+            this.show_pass_boX.Location = new System.Drawing.Point(263, 442);
+            this.show_pass_boX.Name = "show_pass_boX";
+            this.show_pass_boX.Size = new System.Drawing.Size(102, 17);
+            this.show_pass_boX.TabIndex = 2;
+            this.show_pass_boX.Text = "Show Password";
+            this.show_pass_boX.UseVisualStyleBackColor = true;
+            this.show_pass_boX.CheckedChanged += new System.EventHandler(this.show_pass_boX_CheckedChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(459, 131);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(128, 13);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "You cannot change email";
+            // 
+            // Email_box_disabled_cng_pass
+            // 
+            this.Email_box_disabled_cng_pass.Enabled = false;
+            this.Email_box_disabled_cng_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email_box_disabled_cng_pass.ForeColor = System.Drawing.Color.Silver;
+            this.Email_box_disabled_cng_pass.Location = new System.Drawing.Point(263, 90);
+            this.Email_box_disabled_cng_pass.Name = "Email_box_disabled_cng_pass";
+            this.Email_box_disabled_cng_pass.ReadOnly = true;
+            this.Email_box_disabled_cng_pass.Size = new System.Drawing.Size(324, 38);
+            this.Email_box_disabled_cng_pass.TabIndex = 8;
+            this.Email_box_disabled_cng_pass.Text = "your-email";
+            this.Email_box_disabled_cng_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Email_box_disabled_cng_pass.TextChanged += new System.EventHandler(this.email_txbox_disabled_TextChanged);
+            // 
+            // cnfrm_pas_input
+            // 
+            this.cnfrm_pas_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnfrm_pas_input.Location = new System.Drawing.Point(263, 386);
+            this.cnfrm_pas_input.Name = "cnfrm_pas_input";
+            this.cnfrm_pas_input.PasswordChar = '*';
+            this.cnfrm_pas_input.Size = new System.Drawing.Size(324, 38);
+            this.cnfrm_pas_input.TabIndex = 1;
+            // 
+            // password_input
+            // 
+            this.password_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password_input.Location = new System.Drawing.Point(263, 253);
+            this.password_input.Name = "password_input";
+            this.password_input.PasswordChar = '*';
+            this.password_input.Size = new System.Drawing.Size(324, 38);
+            this.password_input.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.DarkRed;
+            this.label8.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(204, 58);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 27);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Email";
+            this.label8.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.DarkRed;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(692, 514);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 27);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Cancel";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // save_changes_pass_chng
+            // 
+            this.save_changes_pass_chng.AutoSize = true;
+            this.save_changes_pass_chng.BackColor = System.Drawing.Color.DarkRed;
+            this.save_changes_pass_chng.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.save_changes_pass_chng.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_changes_pass_chng.ForeColor = System.Drawing.Color.White;
+            this.save_changes_pass_chng.Location = new System.Drawing.Point(654, 455);
+            this.save_changes_pass_chng.Name = "save_changes_pass_chng";
+            this.save_changes_pass_chng.Size = new System.Drawing.Size(154, 27);
+            this.save_changes_pass_chng.TabIndex = 20;
+            this.save_changes_pass_chng.Text = "Save Changes";
+            this.save_changes_pass_chng.Click += new System.EventHandler(this.save_changes_pass_chng_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.DarkRed;
+            this.label12.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(204, 331);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(200, 27);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Confirm Password";
+            this.label12.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.DarkRed;
+            this.label11.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(204, 198);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(196, 27);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Change Password";
+            this.label11.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(43, 51);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 23;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // Form5
             // 
@@ -244,13 +602,15 @@ namespace DB_PROJECT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1025, 609);
+            this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.close_picture);
+            this.Controls.Add(this.minimize_pictureBox);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.close_picture);
-            this.Controls.Add(this.minimize_pictureBox);
+            this.Controls.Add(this.password_chng_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form5";
             this.Text = " ";
@@ -268,6 +628,12 @@ namespace DB_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.profile_panel.ResumeLayout(false);
+            this.profile_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.update_profile_picture)).EndInit();
+            this.password_chng_panel.ResumeLayout(false);
+            this.password_chng_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -287,7 +653,33 @@ namespace DB_PROJECT
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Upload_picture_lbl;
         private System.Windows.Forms.PictureBox profilePicture;
+        private System.Windows.Forms.Panel profile_panel;
+        private System.Windows.Forms.PictureBox update_profile_picture;
+        private System.Windows.Forms.TextBox profile_name_input;
+        private System.Windows.Forms.TextBox email_txbox_disabled;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label profile_name_lbl;
+        private System.Windows.Forms.TextBox profile_ph_input;
+        private System.Windows.Forms.TextBox profie_address_input;
+        private System.Windows.Forms.Label save_changes_btn;
+        private System.Windows.Forms.Label change_password_btn;
+        private System.Windows.Forms.Label profile_phone_lbl;
+        private System.Windows.Forms.Label profle_name_lbl;
+        private System.Windows.Forms.Label cancel_button;
+        private System.Windows.Forms.Label disclamer_email;
+        private System.Windows.Forms.Panel password_chng_panel;
+        private System.Windows.Forms.CheckBox show_pass_boX;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox Email_box_disabled_cng_pass;
+        private System.Windows.Forms.TextBox cnfrm_pas_input;
+        private System.Windows.Forms.TextBox password_input;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label save_changes_pass_chng;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }
