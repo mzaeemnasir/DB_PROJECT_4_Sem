@@ -41,6 +41,7 @@ namespace DB_PROJECT
             this.panel2 = new System.Windows.Forms.Panel();
             this.profilePicture = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.edit_profile = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -60,6 +61,7 @@ namespace DB_PROJECT
             this.profle_name_lbl = new System.Windows.Forms.Label();
             this.profile_name_lbl = new System.Windows.Forms.Label();
             this.password_chng_panel = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.show_pass_boX = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.Email_box_disabled_cng_pass = new System.Windows.Forms.TextBox();
@@ -70,7 +72,22 @@ namespace DB_PROJECT
             this.save_changes_pass_chng = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.genre_llbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -87,6 +104,7 @@ namespace DB_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.update_profile_picture)).BeginInit();
             this.password_chng_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -189,8 +207,7 @@ namespace DB_PROJECT
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.Controls.Add(this.profilePicture);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.pictureBox7);
+            this.panel2.Controls.Add(this.edit_profile);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -215,31 +232,45 @@ namespace DB_PROJECT
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(52, 327);
+            this.label3.Location = new System.Drawing.Point(52, 302);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 26);
             this.label3.TabIndex = 20;
             this.label3.Text = "Upload Book";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // edit_profile
+            // 
+            this.edit_profile.AutoSize = true;
+            this.edit_profile.BackColor = System.Drawing.Color.Transparent;
+            this.edit_profile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.edit_profile.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit_profile.ForeColor = System.Drawing.Color.White;
+            this.edit_profile.Location = new System.Drawing.Point(63, 122);
+            this.edit_profile.Name = "edit_profile";
+            this.edit_profile.Size = new System.Drawing.Size(68, 15);
+            this.edit_profile.TabIndex = 20;
+            this.edit_profile.Text = "Edit Profile";
+            this.edit_profile.Click += new System.EventHandler(this.edit_profile_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(52, 208);
+            this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(160, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 26);
+            this.label2.Size = new System.Drawing.Size(322, 27);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Search Book";
+            this.label2.Text = "Discover the book you\'ll love";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(3, 202);
+            this.pictureBox7.Location = new System.Drawing.Point(512, 215);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(46, 39);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -249,16 +280,18 @@ namespace DB_PROJECT
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Location = new System.Drawing.Point(4, 321);
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(4, 295);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(44, 39);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
             // 
             // Upload_picture_lbl
             // 
             this.Upload_picture_lbl.AutoSize = true;
-            this.Upload_picture_lbl.BackColor = System.Drawing.Color.DarkRed;
+            this.Upload_picture_lbl.BackColor = System.Drawing.Color.Maroon;
             this.Upload_picture_lbl.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Upload_picture_lbl.ForeColor = System.Drawing.Color.White;
             this.Upload_picture_lbl.Location = new System.Drawing.Point(9, 138);
@@ -289,6 +322,7 @@ namespace DB_PROJECT
             this.profile_panel.Name = "profile_panel";
             this.profile_panel.Size = new System.Drawing.Size(823, 574);
             this.profile_panel.TabIndex = 21;
+            this.profile_panel.Click += new System.EventHandler(this.s);
             this.profile_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.profile_panel_Paint);
             // 
             // disclamer_email
@@ -370,7 +404,7 @@ namespace DB_PROJECT
             this.cancel_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancel_button.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel_button.ForeColor = System.Drawing.Color.White;
-            this.cancel_button.Location = new System.Drawing.Point(692, 514);
+            this.cancel_button.Location = new System.Drawing.Point(696, 514);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(80, 27);
             this.cancel_button.TabIndex = 20;
@@ -447,6 +481,7 @@ namespace DB_PROJECT
             // password_chng_panel
             // 
             this.password_chng_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.password_chng_panel.Controls.Add(this.panel3);
             this.password_chng_panel.Controls.Add(this.pictureBox8);
             this.password_chng_panel.Controls.Add(this.show_pass_boX);
             this.password_chng_panel.Controls.Add(this.label5);
@@ -463,6 +498,17 @@ namespace DB_PROJECT
             this.password_chng_panel.Size = new System.Drawing.Size(823, 574);
             this.password_chng_panel.TabIndex = 21;
             this.password_chng_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.profile_panel_Paint);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(43, 51);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 23;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // show_pass_boX
             // 
@@ -583,16 +629,174 @@ namespace DB_PROJECT
             this.label11.Text = "Change Password";
             this.label11.Click += new System.EventHandler(this.label1_Click);
             // 
-            // pictureBox8
+            // panel3
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(43, 51);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 23;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            this.panel3.Controls.Add(this.panel7);
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.pictureBox7);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.genre_llbl);
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(822, 574);
+            this.panel3.TabIndex = 24;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(119, 82);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // genre_llbl
+            // 
+            this.genre_llbl.AutoSize = true;
+            this.genre_llbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genre_llbl.Location = new System.Drawing.Point(39, 78);
+            this.genre_llbl.Name = "genre_llbl";
+            this.genre_llbl.Size = new System.Drawing.Size(66, 25);
+            this.genre_llbl.TabIndex = 1;
+            this.genre_llbl.Text = "Genre";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(660, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Popular Subjets";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(636, 90);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(3, 484);
+            this.panel4.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(648, 131);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(162, 68);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Science Fiction";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(648, 249);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(162, 68);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Adventure Stories";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(648, 363);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(162, 68);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Love Stories";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(648, 473);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(162, 68);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Time Travel";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Malgun Gothic Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Teal;
+            this.label6.Location = new System.Drawing.Point(287, 312);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 32);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Quote";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Location = new System.Drawing.Point(165, 252);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(313, 2);
+            this.panel5.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox1.Location = new System.Drawing.Point(165, 216);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(313, 31);
+            this.textBox1.TabIndex = 21;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Malgun Gothic Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Teal;
+            this.label7.Location = new System.Drawing.Point(37, 396);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(555, 96);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Once you see the boundaries of your environment, \r\nthey are no longer the boundar" +
+    "ies of your \r\nenvironment.";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(277, 367);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(100, 2);
+            this.panel6.TabIndex = 5;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.ForeColor = System.Drawing.Color.Black;
+            this.panel7.Location = new System.Drawing.Point(252, 529);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 2);
+            this.panel7.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(261, 515);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(163, 24);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Marshall McLuhan";
             // 
             // Form5
             // 
@@ -602,15 +806,15 @@ namespace DB_PROJECT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1025, 609);
-            this.Controls.Add(this.profile_panel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.close_picture);
             this.Controls.Add(this.minimize_pictureBox);
+            this.Controls.Add(this.password_chng_panel);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.password_chng_panel);
+            this.Controls.Add(this.profile_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form5";
             this.Text = " ";
@@ -634,6 +838,8 @@ namespace DB_PROJECT
             this.password_chng_panel.ResumeLayout(false);
             this.password_chng_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -681,5 +887,22 @@ namespace DB_PROJECT
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label edit_profile;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label genre_llbl;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label10;
     }
 }

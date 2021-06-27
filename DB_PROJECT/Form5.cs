@@ -58,6 +58,8 @@ namespace DB_PROJECT
                 }
             }
             con.Close();
+            profile_panel.Hide();
+            password_chng_panel.Hide();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -124,6 +126,7 @@ namespace DB_PROJECT
         {
             profile_panel.Hide();
             password_chng_panel.Show();
+            password_chng_panel.BringToFront();
         }
 
         private void email_txbox_disabled_TextChanged(object sender, EventArgs e)
@@ -201,9 +204,8 @@ namespace DB_PROJECT
                 update_profile_picture.ImageLocation = file_location;
                 update_profile_picture.SizeMode = PictureBoxSizeMode.Zoom;
                 profilePicture.SizeMode = PictureBoxSizeMode.Zoom;
-
             }
-
+            
         }
 
         private void cancel_button_Click(object sender, EventArgs e)
@@ -265,6 +267,32 @@ namespace DB_PROJECT
         }
 
         private void profilePicture_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void edit_profile_Click(object sender, EventArgs e)
+        {
+            profile_panel.Show();
+            profile_panel.BringToFront();
+        }
+
+        private void s(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
