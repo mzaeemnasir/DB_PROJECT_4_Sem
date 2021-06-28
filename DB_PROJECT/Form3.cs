@@ -51,45 +51,7 @@ namespace DB_PROJECT
         {
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(textBox1.Text.ToString()))
-            {
-                textBox1.Text = "Search by Aurtor name, Book name";
-                textBox1.ForeColor = Color.Gray;
-            }
-            else
-            {
-                textBox1.Text = null;
-            }
-        }
-
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "")
-            {
-                textBox1.Text = "Search by Aurtor name, Book name";
-                textBox1.ForeColor = Color.Gray;
-            }
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            if(textBox1.Enabled == false)
-            {
-                textBox1.Enabled = true;    
-            }
-            else
-            {
-                // Search
-            }
-        }
+        
 
         private void close_picture_Click(object sender, EventArgs e)
         {
@@ -101,23 +63,7 @@ namespace DB_PROJECT
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

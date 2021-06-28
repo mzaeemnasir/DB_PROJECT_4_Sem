@@ -80,16 +80,11 @@ namespace DB_PROJECT
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.genre_llbl = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.DGV = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -107,6 +102,7 @@ namespace DB_PROJECT
             this.password_chng_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -278,23 +274,23 @@ namespace DB_PROJECT
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(160, 145);
+            this.label2.Location = new System.Drawing.Point(247, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(322, 27);
             this.label2.TabIndex = 20;
             this.label2.Text = "Discover the book you\'ll love";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // search_img
             // 
             this.search_img.BackColor = System.Drawing.Color.Transparent;
             this.search_img.Image = ((System.Drawing.Image)(resources.GetObject("search_img.Image")));
-            this.search_img.Location = new System.Drawing.Point(512, 215);
+            this.search_img.Location = new System.Drawing.Point(599, 227);
             this.search_img.Name = "search_img";
             this.search_img.Size = new System.Drawing.Size(46, 39);
             this.search_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.search_img.TabIndex = 19;
             this.search_img.TabStop = false;
+            this.search_img.Click += new System.EventHandler(this.search_img_Click);
             // 
             // Upload_picture_lbl
             // 
@@ -639,6 +635,7 @@ namespace DB_PROJECT
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.DGV);
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.search_input);
@@ -646,14 +643,8 @@ namespace DB_PROJECT
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.search_img);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.comboBox2);
             this.panel3.Controls.Add(this.genre_llbl);
@@ -668,7 +659,7 @@ namespace DB_PROJECT
             // 
             this.panel7.BackColor = System.Drawing.Color.Black;
             this.panel7.ForeColor = System.Drawing.Color.Black;
-            this.panel7.Location = new System.Drawing.Point(252, 529);
+            this.panel7.Location = new System.Drawing.Point(338, 529);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(10, 2);
             this.panel7.TabIndex = 6;
@@ -676,7 +667,7 @@ namespace DB_PROJECT
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(277, 367);
+            this.panel6.Location = new System.Drawing.Point(372, 367);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(100, 2);
             this.panel6.TabIndex = 5;
@@ -687,7 +678,7 @@ namespace DB_PROJECT
             this.search_input.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.search_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search_input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.search_input.Location = new System.Drawing.Point(165, 216);
+            this.search_input.Location = new System.Drawing.Point(252, 228);
             this.search_input.Name = "search_input";
             this.search_input.Size = new System.Drawing.Size(313, 31);
             this.search_input.TabIndex = 0;
@@ -696,7 +687,7 @@ namespace DB_PROJECT
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(165, 252);
+            this.panel5.Location = new System.Drawing.Point(252, 264);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(313, 2);
             this.panel5.TabIndex = 4;
@@ -706,7 +697,7 @@ namespace DB_PROJECT
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Malgun Gothic Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Teal;
-            this.label7.Location = new System.Drawing.Point(37, 396);
+            this.label7.Location = new System.Drawing.Point(144, 396);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(555, 96);
             this.label7.TabIndex = 5;
@@ -719,7 +710,7 @@ namespace DB_PROJECT
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(261, 515);
+            this.label10.Location = new System.Drawing.Point(347, 515);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(163, 24);
             this.label10.TabIndex = 5;
@@ -728,73 +719,46 @@ namespace DB_PROJECT
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Malgun Gothic Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(287, 312);
+            this.label6.BackColor = System.Drawing.Color.DarkRed;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(670, 83);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 32);
+            this.label6.Size = new System.Drawing.Size(61, 24);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Quote";
+            this.label6.Text = "Apply";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // button4
+            // label13
             // 
-            this.button4.Location = new System.Drawing.Point(648, 473);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(162, 68);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Time Travel";
-            this.button4.UseVisualStyleBackColor = true;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(394, 80);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(73, 25);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Format";
             // 
-            // button3
+            // comboBox2
             // 
-            this.button3.Location = new System.Drawing.Point(648, 363);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(162, 68);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Love Stories";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(648, 249);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 68);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Adventure Stories";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(648, 131);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 68);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Science Fiction";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(636, 90);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 484);
-            this.panel4.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(660, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Popular Subjets";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Audible Audiobook",
+            "Soft Book",
+            "Hard Book"});
+            this.comboBox2.Location = new System.Drawing.Point(477, 84);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(126, 21);
+            this.comboBox2.TabIndex = 6;
             // 
             // genre_llbl
             // 
             this.genre_llbl.AutoSize = true;
             this.genre_llbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genre_llbl.Location = new System.Drawing.Point(39, 79);
+            this.genre_llbl.Location = new System.Drawing.Point(39, 78);
             this.genre_llbl.Name = "genre_llbl";
             this.genre_llbl.Size = new System.Drawing.Size(66, 25);
             this.genre_llbl.TabIndex = 1;
@@ -803,28 +767,27 @@ namespace DB_PROJECT
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Action and adventure",
+            "Biography",
+            "Classic",
+            "Crime",
+            "Encyclopedia",
+            "History",
+            "Horror",
+            "Science fiction"});
             this.comboBox1.Location = new System.Drawing.Point(119, 82);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(126, 21);
             this.comboBox1.TabIndex = 6;
             // 
-            // comboBox2
+            // DGV
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(382, 82);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(126, 21);
-            this.comboBox2.TabIndex = 6;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(299, 78);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 25);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Format";
+            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV.Location = new System.Drawing.Point(0, 331);
+            this.DGV.Name = "DGV";
+            this.DGV.Size = new System.Drawing.Size(823, 243);
+            this.DGV.TabIndex = 21;
             // 
             // Form5
             // 
@@ -866,6 +829,7 @@ namespace DB_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -916,12 +880,6 @@ namespace DB_PROJECT
         private System.Windows.Forms.Label edit_profile;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label genre_llbl;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel5;
@@ -932,5 +890,6 @@ namespace DB_PROJECT
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DataGridView DGV;
     }
 }

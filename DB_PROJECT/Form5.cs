@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using System.Reflection;
+
 namespace DB_PROJECT
 {
     public partial class Form5 : Form
@@ -110,12 +112,7 @@ namespace DB_PROJECT
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form3 f3 = new Form3();
-            f3.Show();
-        }
+        
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -295,6 +292,47 @@ namespace DB_PROJECT
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void search_img_Click(object sender, EventArgs e)
+        {
+            // this Function will search the books in the database 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text != "" && comboBox2.Text != "")
+            {
+                con.Open();
+                string query_txt = @"Select * From Books where genre = '" + comboBox1.Text + "' AND bookFormat = '"+comboBox2.Text+"' ";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query_txt, con);
+                MessageBox.Show(query_txt); 
+                DataTable dataTable  = new DataTable();
+                dataAdapter.Fill(dataTable);
+                DGV.DataSource= dataTable;
+                
+                con.Close();
+            }
+            else if (comboBox1.Text != "")
+            {
+                con.Open();
+                // if only combobox has txt
+                string query_txt = @"Select * From Books where genre = '" + comboBox1.Text + "' ";
+                SqlCommand query = new SqlCommand(query_txt, con);
+                // Gether data
+                con.Close();
+            }
+            else if (comboBox2.Text != "")
+            {
+                con.Open();
+                // if only combobox has txt
+                string query_txt = @"Select * From Books where bookFormat = '" + comboBox2.Text + "' ";
+                SqlCommand query = new SqlCommand(query_txt, con);
+                //Gether data
+                con.Close();
+            }
+            else
+                MessageBox.Show("Filters are empty");
         }
     }
 }
