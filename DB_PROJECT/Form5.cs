@@ -116,7 +116,8 @@ namespace DB_PROJECT
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            Form4 f4 = new Form4();
+            f4.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -296,7 +297,50 @@ namespace DB_PROJECT
 
         private void search_img_Click(object sender, EventArgs e)
         {
-            // this Function will search the books in the database 
+
+            if (comboBox1.Text != "" && comboBox2.Text != "" && search_input.Text != "")
+            {
+                con.Open();
+                string query_txt = @"Select * From Books where genre = '" + comboBox1.Text + "' AND bookFormat = '" + comboBox2.Text + "' AND bookName = '"+search_input.Text+"' ";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query_txt, con);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                DGV.DataSource = dataTable;
+
+                con.Close();
+            }
+            else if (comboBox1.Text != "" && search_input.Text != "")
+            {
+                con.Open();
+                // if only combobox has txt
+                string query_txt = @"Select * From Books where genre = '" + comboBox1.Text + "' AND bookName = '" + search_input.Text + "' ";
+                SqlCommand query = new SqlCommand(query_txt, con);
+                // Gether data
+                con.Close();
+            }
+            else if (comboBox2.Text != "" && search_input.Text != "")
+            {
+                con.Open();
+                // if only combobox has txt
+                string query_txt = @"Select * From Books where bookFormat = '" + comboBox2.Text + "' AND bookName = '" + search_input.Text + "' ";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query_txt, con);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                DGV.DataSource = dataTable;
+                con.Close();
+            }
+            else if (search_input.Text != "")
+            {
+                con.Open();
+                // if only combobox has txt
+                string query_txt = @"Select * From Books where bookName LIKE '%"+search_input.Text +"%' ";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query_txt, con);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                DGV.DataSource = dataTable;
+                con.Close();
+            }
+
         }
 
         private void label6_Click(object sender, EventArgs e)

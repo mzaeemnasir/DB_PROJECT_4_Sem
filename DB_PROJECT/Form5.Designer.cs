@@ -73,6 +73,7 @@ namespace DB_PROJECT
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.DGV = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.search_input = new System.Windows.Forms.TextBox();
@@ -84,7 +85,8 @@ namespace DB_PROJECT
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.genre_llbl = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.DGV = new System.Windows.Forms.DataGridView();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -103,6 +105,7 @@ namespace DB_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -165,7 +168,7 @@ namespace DB_PROJECT
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -206,6 +209,8 @@ namespace DB_PROJECT
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox7);
             this.panel2.Controls.Add(this.profilePicture);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.edit_profile);
@@ -283,6 +288,7 @@ namespace DB_PROJECT
             // search_img
             // 
             this.search_img.BackColor = System.Drawing.Color.Transparent;
+            this.search_img.Cursor = System.Windows.Forms.Cursors.Hand;
             this.search_img.Image = ((System.Drawing.Image)(resources.GetObject("search_img.Image")));
             this.search_img.Location = new System.Drawing.Point(599, 227);
             this.search_img.Name = "search_img";
@@ -655,6 +661,14 @@ namespace DB_PROJECT
             this.panel3.TabIndex = 24;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // DGV
+            // 
+            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV.Location = new System.Drawing.Point(0, 331);
+            this.DGV.Name = "DGV";
+            this.DGV.Size = new System.Drawing.Size(823, 243);
+            this.DGV.TabIndex = 21;
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Black;
@@ -781,13 +795,28 @@ namespace DB_PROJECT
             this.comboBox1.Size = new System.Drawing.Size(126, 21);
             this.comboBox1.TabIndex = 6;
             // 
-            // DGV
+            // pictureBox7
             // 
-            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV.Location = new System.Drawing.Point(0, 331);
-            this.DGV.Name = "DGV";
-            this.DGV.Size = new System.Drawing.Size(823, 243);
-            this.DGV.TabIndex = 21;
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(3, 327);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(48, 50);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 21;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(61, 339);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 26);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Contact us";
             // 
             // Form5
             // 
@@ -830,6 +859,7 @@ namespace DB_PROJECT
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -891,5 +921,7 @@ namespace DB_PROJECT
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DataGridView DGV;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

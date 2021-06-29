@@ -43,12 +43,14 @@ namespace DB_PROJECT
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.bookgenreBox = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.bookFormatBox = new System.Windows.Forms.ComboBox();
+            this.publicationYear = new System.Windows.Forms.TextBox();
+            this.bookPrice = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -131,7 +133,7 @@ namespace DB_PROJECT
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(112, 39);
+            this.pictureBox3.Location = new System.Drawing.Point(112, 26);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(248, 58);
             this.pictureBox3.TabIndex = 0;
@@ -140,6 +142,7 @@ namespace DB_PROJECT
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(306, 449);
             this.pictureBox5.Name = "pictureBox5";
@@ -147,12 +150,13 @@ namespace DB_PROJECT
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // bookName
             // 
             this.bookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookName.ForeColor = System.Drawing.Color.Silver;
-            this.bookName.Location = new System.Drawing.Point(90, 150);
+            this.bookName.Location = new System.Drawing.Point(90, 103);
             this.bookName.Multiline = true;
             this.bookName.Name = "bookName";
             this.bookName.Size = new System.Drawing.Size(307, 40);
@@ -165,7 +169,7 @@ namespace DB_PROJECT
             // 
             this.bookarthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookarthor.ForeColor = System.Drawing.Color.Silver;
-            this.bookarthor.Location = new System.Drawing.Point(90, 219);
+            this.bookarthor.Location = new System.Drawing.Point(90, 172);
             this.bookarthor.Multiline = true;
             this.bookarthor.Name = "bookarthor";
             this.bookarthor.Size = new System.Drawing.Size(307, 40);
@@ -178,7 +182,7 @@ namespace DB_PROJECT
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Maiandra GD", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(106, 456);
+            this.label1.Location = new System.Drawing.Point(118, 452);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 32);
             this.label1.TabIndex = 26;
@@ -188,7 +192,7 @@ namespace DB_PROJECT
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(87, 406);
+            this.label2.Location = new System.Drawing.Point(62, 418);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(215, 18);
             this.label2.TabIndex = 26;
@@ -198,21 +202,11 @@ namespace DB_PROJECT
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(86, 351);
+            this.label5.Location = new System.Drawing.Point(86, 341);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 22);
             this.label5.TabIndex = 26;
             this.label5.Text = "Book Genre";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(85, 301);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 22);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Publication date";
             // 
             // label3
             // 
@@ -234,41 +228,37 @@ namespace DB_PROJECT
             this.label4.TabIndex = 26;
             this.label4.Text = "Upload Image";
             // 
-            // comboBox1
+            // bookgenreBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Fiction",
-            "Non-Fiction",
-            "Drama",
-            "Poetry",
-            "Novel",
-            "Short Story",
-            "Biography"});
-            this.comboBox1.Location = new System.Drawing.Point(216, 354);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(181, 21);
-            this.comboBox1.TabIndex = 27;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(241, 303);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(156, 20);
-            this.dateTimePicker1.TabIndex = 28;
+            this.bookgenreBox.FormattingEnabled = true;
+            this.bookgenreBox.Items.AddRange(new object[] {
+            "Action and adventure",
+            "Biography",
+            "Classic",
+            "Crime",
+            "Encyclopedia",
+            "History",
+            "Horror",
+            "Science fiction"});
+            this.bookgenreBox.Location = new System.Drawing.Point(216, 344);
+            this.bookgenreBox.Name = "bookgenreBox";
+            this.bookgenreBox.Size = new System.Drawing.Size(181, 21);
+            this.bookgenreBox.TabIndex = 27;
+            this.bookgenreBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.bookFormatBox);
+            this.panel2.Controls.Add(this.bookgenreBox);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.bookPrice);
+            this.panel2.Controls.Add(this.publicationYear);
             this.panel2.Controls.Add(this.bookarthor);
             this.panel2.Controls.Add(this.bookName);
             this.panel2.Controls.Add(this.pictureBox5);
@@ -278,6 +268,60 @@ namespace DB_PROJECT
             this.panel2.Size = new System.Drawing.Size(477, 538);
             this.panel2.TabIndex = 24;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(86, 384);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(119, 22);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Book Format";
+            // 
+            // bookFormatBox
+            // 
+            this.bookFormatBox.FormattingEnabled = true;
+            this.bookFormatBox.Items.AddRange(new object[] {
+            "Action and adventure",
+            "Biography",
+            "Classic",
+            "Crime",
+            "Encyclopedia",
+            "History",
+            "Horror",
+            "Science fiction"});
+            this.bookFormatBox.Location = new System.Drawing.Point(216, 386);
+            this.bookFormatBox.Name = "bookFormatBox";
+            this.bookFormatBox.Size = new System.Drawing.Size(181, 21);
+            this.bookFormatBox.TabIndex = 27;
+            this.bookFormatBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // publicationYear
+            // 
+            this.publicationYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.publicationYear.ForeColor = System.Drawing.Color.Silver;
+            this.publicationYear.Location = new System.Drawing.Point(90, 233);
+            this.publicationYear.Multiline = true;
+            this.publicationYear.Name = "publicationYear";
+            this.publicationYear.Size = new System.Drawing.Size(307, 40);
+            this.publicationYear.TabIndex = 25;
+            this.publicationYear.Text = "Enter Publication Year";
+            this.publicationYear.Enter += new System.EventHandler(this.publicationYear_Enter);
+            this.publicationYear.Leave += new System.EventHandler(this.publicationYear_Leave);
+            // 
+            // bookPrice
+            // 
+            this.bookPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookPrice.ForeColor = System.Drawing.Color.Silver;
+            this.bookPrice.Location = new System.Drawing.Point(90, 289);
+            this.bookPrice.Multiline = true;
+            this.bookPrice.Name = "bookPrice";
+            this.bookPrice.Size = new System.Drawing.Size(307, 40);
+            this.bookPrice.TabIndex = 25;
+            this.bookPrice.Text = "Enter Book Price";
+            this.bookPrice.Enter += new System.EventHandler(this.bookPrice_Enter);
+            this.bookPrice.Leave += new System.EventHandler(this.bookPrice_Leave);
             // 
             // Form4
             // 
@@ -323,11 +367,13 @@ namespace DB_PROJECT
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox bookgenreBox;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox bookFormatBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox publicationYear;
+        private System.Windows.Forms.TextBox bookPrice;
     }
 }
