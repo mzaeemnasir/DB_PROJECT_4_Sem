@@ -29,6 +29,7 @@ namespace DB_PROJECT
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -73,20 +74,34 @@ namespace DB_PROJECT
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.DGV = new System.Windows.Forms.DataGridView();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.search_input = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.genre_llbl = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.bookRackDataSet = new DB_PROJECT.BookRackDataSet();
+            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.booksTableAdapter = new DB_PROJECT.BookRackDataSetTableAdapters.BooksTableAdapter();
+            this.booksBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.PS1 = new System.Windows.Forms.Button();
+            this.PS2 = new System.Windows.Forms.Button();
+            this.PS3 = new System.Windows.Forms.Button();
+            this.PS4 = new System.Windows.Forms.Button();
+            this.PS5 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.DGV = new System.Windows.Forms.DataGridView();
+            this.bookIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookAuthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.publicationYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookFormatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookImgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -104,8 +119,11 @@ namespace DB_PROJECT
             this.password_chng_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookRackDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -174,7 +192,7 @@ namespace DB_PROJECT
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1025, 34);
+            this.panel1.Size = new System.Drawing.Size(1187, 29);
             this.panel1.TabIndex = 14;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -185,7 +203,7 @@ namespace DB_PROJECT
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(987, 1);
+            this.pictureBox3.Location = new System.Drawing.Point(1149, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -197,7 +215,7 @@ namespace DB_PROJECT
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(951, 0);
+            this.pictureBox5.Location = new System.Drawing.Point(1113, -1);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(30, 32);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -209,8 +227,6 @@ namespace DB_PROJECT
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox7);
             this.panel2.Controls.Add(this.profilePicture);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.edit_profile);
@@ -330,7 +346,7 @@ namespace DB_PROJECT
             this.profile_panel.Controls.Add(this.Upload_picture_lbl);
             this.profile_panel.Location = new System.Drawing.Point(202, 35);
             this.profile_panel.Name = "profile_panel";
-            this.profile_panel.Size = new System.Drawing.Size(823, 574);
+            this.profile_panel.Size = new System.Drawing.Size(985, 574);
             this.profile_panel.TabIndex = 21;
             this.profile_panel.Click += new System.EventHandler(this.s);
             this.profile_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.profile_panel_Paint);
@@ -504,7 +520,7 @@ namespace DB_PROJECT
             this.password_chng_panel.Controls.Add(this.label11);
             this.password_chng_panel.Location = new System.Drawing.Point(202, 35);
             this.password_chng_panel.Name = "password_chng_panel";
-            this.password_chng_panel.Size = new System.Drawing.Size(823, 574);
+            this.password_chng_panel.Size = new System.Drawing.Size(982, 574);
             this.password_chng_panel.TabIndex = 21;
             this.password_chng_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.profile_panel_Paint);
             // 
@@ -642,12 +658,10 @@ namespace DB_PROJECT
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel3.Controls.Add(this.DGV);
-            this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.search_input);
             this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.search_img);
@@ -657,34 +671,9 @@ namespace DB_PROJECT
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Location = new System.Drawing.Point(202, 35);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(822, 574);
+            this.panel3.Size = new System.Drawing.Size(985, 574);
             this.panel3.TabIndex = 24;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // DGV
-            // 
-            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV.Location = new System.Drawing.Point(0, 331);
-            this.DGV.Name = "DGV";
-            this.DGV.Size = new System.Drawing.Size(823, 243);
-            this.DGV.TabIndex = 21;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Black;
-            this.panel7.ForeColor = System.Drawing.Color.Black;
-            this.panel7.Location = new System.Drawing.Point(338, 529);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 2);
-            this.panel7.TabIndex = 6;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(372, 367);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(100, 2);
-            this.panel6.TabIndex = 5;
             // 
             // search_input
             // 
@@ -705,30 +694,6 @@ namespace DB_PROJECT
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(313, 2);
             this.panel5.TabIndex = 4;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Malgun Gothic Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Teal;
-            this.label7.Location = new System.Drawing.Point(144, 396);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(555, 96);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Once you see the boundaries of your environment, \r\nthey are no longer the boundar" +
-    "ies of your \r\nenvironment.";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(347, 515);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(163, 24);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Marshall McLuhan";
             // 
             // label6
             // 
@@ -795,28 +760,219 @@ namespace DB_PROJECT
             this.comboBox1.Size = new System.Drawing.Size(126, 21);
             this.comboBox1.TabIndex = 6;
             // 
-            // pictureBox7
+            // bookRackDataSet
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(3, 327);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(48, 50);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 21;
-            this.pictureBox7.TabStop = false;
+            this.bookRackDataSet.DataSetName = "BookRackDataSet";
+            this.bookRackDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label1
+            // booksBindingSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(61, 339);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 26);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Contact us";
+            this.booksBindingSource.DataMember = "Books";
+            this.booksBindingSource.DataSource = this.bookRackDataSet;
+            // 
+            // booksTableAdapter
+            // 
+            this.booksTableAdapter.ClearBeforeFill = true;
+            // 
+            // booksBindingSource1
+            // 
+            this.booksBindingSource1.DataMember = "Books";
+            this.booksBindingSource1.DataSource = this.bookRackDataSet;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(820, 27);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(2, 558);
+            this.panel4.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 25);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Popular Subjects";
+            // 
+            // PS1
+            // 
+            this.PS1.BackColor = System.Drawing.Color.Transparent;
+            this.PS1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PS1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PS1.FlatAppearance.BorderSize = 0;
+            this.PS1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PS1.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PS1.ForeColor = System.Drawing.Color.Black;
+            this.PS1.Location = new System.Drawing.Point(4, 115);
+            this.PS1.Name = "PS1";
+            this.PS1.Size = new System.Drawing.Size(154, 44);
+            this.PS1.TabIndex = 22;
+            this.PS1.Text = "Science Fiction";
+            this.PS1.UseVisualStyleBackColor = false;
+            this.PS1.Click += new System.EventHandler(this.PS1_Click);
+            this.PS1.MouseLeave += new System.EventHandler(this.PS1_MouseLeave);
+            this.PS1.MouseHover += new System.EventHandler(this.PS1_MouseHover);
+            // 
+            // PS2
+            // 
+            this.PS2.BackColor = System.Drawing.Color.Transparent;
+            this.PS2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PS2.FlatAppearance.BorderSize = 0;
+            this.PS2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PS2.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PS2.ForeColor = System.Drawing.Color.Black;
+            this.PS2.Location = new System.Drawing.Point(4, 200);
+            this.PS2.Name = "PS2";
+            this.PS2.Size = new System.Drawing.Size(154, 44);
+            this.PS2.TabIndex = 22;
+            this.PS2.Text = "Action & Adventure";
+            this.PS2.UseVisualStyleBackColor = false;
+            this.PS2.Click += new System.EventHandler(this.PS2_Click);
+            this.PS2.MouseLeave += new System.EventHandler(this.PS2_MouseLeave);
+            this.PS2.MouseHover += new System.EventHandler(this.PS2_MouseHover);
+            // 
+            // PS3
+            // 
+            this.PS3.BackColor = System.Drawing.Color.Transparent;
+            this.PS3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PS3.FlatAppearance.BorderSize = 0;
+            this.PS3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PS3.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PS3.ForeColor = System.Drawing.Color.Black;
+            this.PS3.Location = new System.Drawing.Point(3, 287);
+            this.PS3.Name = "PS3";
+            this.PS3.Size = new System.Drawing.Size(154, 44);
+            this.PS3.TabIndex = 22;
+            this.PS3.Text = "Historical";
+            this.PS3.UseVisualStyleBackColor = false;
+            this.PS3.Click += new System.EventHandler(this.PS3_Click);
+            this.PS3.MouseLeave += new System.EventHandler(this.PS3_MouseLeave);
+            this.PS3.MouseHover += new System.EventHandler(this.PS3_MouseHover);
+            // 
+            // PS4
+            // 
+            this.PS4.BackColor = System.Drawing.Color.Transparent;
+            this.PS4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PS4.FlatAppearance.BorderSize = 0;
+            this.PS4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PS4.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PS4.ForeColor = System.Drawing.Color.Black;
+            this.PS4.Location = new System.Drawing.Point(4, 379);
+            this.PS4.Name = "PS4";
+            this.PS4.Size = new System.Drawing.Size(154, 44);
+            this.PS4.TabIndex = 22;
+            this.PS4.Text = "Crime";
+            this.PS4.UseVisualStyleBackColor = false;
+            this.PS4.Click += new System.EventHandler(this.PS4_Click);
+            this.PS4.MouseLeave += new System.EventHandler(this.PS4_MouseLeave);
+            this.PS4.MouseHover += new System.EventHandler(this.PS4_MouseHover);
+            // 
+            // PS5
+            // 
+            this.PS5.BackColor = System.Drawing.Color.Transparent;
+            this.PS5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PS5.FlatAppearance.BorderSize = 0;
+            this.PS5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PS5.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PS5.ForeColor = System.Drawing.Color.Black;
+            this.PS5.Location = new System.Drawing.Point(4, 476);
+            this.PS5.Name = "PS5";
+            this.PS5.Size = new System.Drawing.Size(154, 44);
+            this.PS5.TabIndex = 22;
+            this.PS5.Text = "Enclylopedia";
+            this.PS5.UseVisualStyleBackColor = false;
+            this.PS5.Click += new System.EventHandler(this.PS5_Click);
+            this.PS5.MouseLeave += new System.EventHandler(this.PS5_MouseLeave);
+            this.PS5.MouseHover += new System.EventHandler(this.PS5_MouseHover);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.PS5);
+            this.panel6.Controls.Add(this.PS4);
+            this.panel6.Controls.Add(this.PS3);
+            this.panel6.Controls.Add(this.PS2);
+            this.panel6.Controls.Add(this.PS1);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(822, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(163, 574);
+            this.panel6.TabIndex = 23;
+            // 
+            // DGV
+            // 
+            this.DGV.AllowUserToAddRows = false;
+            this.DGV.AllowUserToDeleteRows = false;
+            this.DGV.AutoGenerateColumns = false;
+            this.DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bookIdDataGridViewTextBoxColumn,
+            this.bookNameDataGridViewTextBoxColumn,
+            this.bookAuthorDataGridViewTextBoxColumn,
+            this.publicationYearDataGridViewTextBoxColumn,
+            this.bookFormatDataGridViewTextBoxColumn,
+            this.bookpriceDataGridViewTextBoxColumn,
+            this.genreDataGridViewTextBoxColumn,
+            this.bookImgDataGridViewTextBoxColumn});
+            this.DGV.DataSource = this.booksBindingSource;
+            this.DGV.Location = new System.Drawing.Point(0, 313);
+            this.DGV.Name = "DGV";
+            this.DGV.ReadOnly = true;
+            this.DGV.Size = new System.Drawing.Size(822, 258);
+            this.DGV.TabIndex = 23;
+            // 
+            // bookIdDataGridViewTextBoxColumn
+            // 
+            this.bookIdDataGridViewTextBoxColumn.DataPropertyName = "bookId";
+            this.bookIdDataGridViewTextBoxColumn.HeaderText = "bookId";
+            this.bookIdDataGridViewTextBoxColumn.Name = "bookIdDataGridViewTextBoxColumn";
+            this.bookIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bookNameDataGridViewTextBoxColumn
+            // 
+            this.bookNameDataGridViewTextBoxColumn.DataPropertyName = "bookName";
+            this.bookNameDataGridViewTextBoxColumn.HeaderText = "bookName";
+            this.bookNameDataGridViewTextBoxColumn.Name = "bookNameDataGridViewTextBoxColumn";
+            // 
+            // bookAuthorDataGridViewTextBoxColumn
+            // 
+            this.bookAuthorDataGridViewTextBoxColumn.DataPropertyName = "bookAuthor";
+            this.bookAuthorDataGridViewTextBoxColumn.HeaderText = "bookAuthor";
+            this.bookAuthorDataGridViewTextBoxColumn.Name = "bookAuthorDataGridViewTextBoxColumn";
+            // 
+            // publicationYearDataGridViewTextBoxColumn
+            // 
+            this.publicationYearDataGridViewTextBoxColumn.DataPropertyName = "publicationYear";
+            this.publicationYearDataGridViewTextBoxColumn.HeaderText = "publicationYear";
+            this.publicationYearDataGridViewTextBoxColumn.Name = "publicationYearDataGridViewTextBoxColumn";
+            // 
+            // bookFormatDataGridViewTextBoxColumn
+            // 
+            this.bookFormatDataGridViewTextBoxColumn.DataPropertyName = "bookFormat";
+            this.bookFormatDataGridViewTextBoxColumn.HeaderText = "bookFormat";
+            this.bookFormatDataGridViewTextBoxColumn.Name = "bookFormatDataGridViewTextBoxColumn";
+            // 
+            // bookpriceDataGridViewTextBoxColumn
+            // 
+            this.bookpriceDataGridViewTextBoxColumn.DataPropertyName = "bookprice";
+            this.bookpriceDataGridViewTextBoxColumn.HeaderText = "bookprice";
+            this.bookpriceDataGridViewTextBoxColumn.Name = "bookpriceDataGridViewTextBoxColumn";
+            // 
+            // genreDataGridViewTextBoxColumn
+            // 
+            this.genreDataGridViewTextBoxColumn.DataPropertyName = "genre";
+            this.genreDataGridViewTextBoxColumn.HeaderText = "genre";
+            this.genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
+            // 
+            // bookImgDataGridViewTextBoxColumn
+            // 
+            this.bookImgDataGridViewTextBoxColumn.DataPropertyName = "bookImg";
+            this.bookImgDataGridViewTextBoxColumn.HeaderText = "bookImg";
+            this.bookImgDataGridViewTextBoxColumn.Name = "bookImgDataGridViewTextBoxColumn";
             // 
             // Form5
             // 
@@ -825,7 +981,7 @@ namespace DB_PROJECT
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1025, 609);
+            this.ClientSize = new System.Drawing.Size(1187, 609);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.close_picture);
@@ -858,8 +1014,12 @@ namespace DB_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookRackDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -914,14 +1074,28 @@ namespace DB_PROJECT
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox search_input;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBox2;
+        private BookRackDataSet bookRackDataSet;
+        private System.Windows.Forms.BindingSource booksBindingSource;
+        private BookRackDataSetTableAdapters.BooksTableAdapter booksTableAdapter;
+        private System.Windows.Forms.BindingSource booksBindingSource1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button PS1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button PS5;
+        private System.Windows.Forms.Button PS4;
+        private System.Windows.Forms.Button PS3;
+        private System.Windows.Forms.Button PS2;
+        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridView DGV;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookAuthorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn publicationYearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookFormatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookpriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookImgDataGridViewTextBoxColumn;
     }
 }

@@ -80,6 +80,7 @@ namespace DB_PROJECT
             this.rst_pas_ph_no_input = new System.Windows.Forms.TextBox();
             this.email_lbl2 = new System.Windows.Forms.Label();
             this.Rst_pas_Phn_lbl = new System.Windows.Forms.Label();
+            this.ShowPassword = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize_pictureBox)).BeginInit();
             this.panel3.SuspendLayout();
@@ -324,10 +325,11 @@ namespace DB_PROJECT
             // 
             this.pass_input.BackColor = System.Drawing.Color.White;
             this.pass_input.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.pass_input.Location = new System.Drawing.Point(32, 373);
+            this.pass_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass_input.Location = new System.Drawing.Point(32, 364);
             this.pass_input.Name = "pass_input";
             this.pass_input.PasswordChar = '*';
-            this.pass_input.Size = new System.Drawing.Size(300, 13);
+            this.pass_input.Size = new System.Drawing.Size(300, 22);
             this.pass_input.TabIndex = 4;
             // 
             // panel6
@@ -364,6 +366,7 @@ namespace DB_PROJECT
             // 
             this.SignUp_panel.AccessibleRole = System.Windows.Forms.AccessibleRole.Dialog;
             this.SignUp_panel.BackColor = System.Drawing.Color.White;
+            this.SignUp_panel.Controls.Add(this.ShowPassword);
             this.SignUp_panel.Controls.Add(this.SignUp_img);
             this.SignUp_panel.Controls.Add(this.pictureBox6);
             this.SignUp_panel.Controls.Add(this.Sign_up_btn);
@@ -452,10 +455,11 @@ namespace DB_PROJECT
             // 
             this.cnfrm_pass_input.BackColor = System.Drawing.Color.White;
             this.cnfrm_pass_input.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cnfrm_pass_input.Location = new System.Drawing.Point(412, 373);
+            this.cnfrm_pass_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnfrm_pass_input.Location = new System.Drawing.Point(412, 360);
             this.cnfrm_pass_input.Name = "cnfrm_pass_input";
             this.cnfrm_pass_input.PasswordChar = '*';
-            this.cnfrm_pass_input.Size = new System.Drawing.Size(280, 13);
+            this.cnfrm_pass_input.Size = new System.Drawing.Size(280, 22);
             this.cnfrm_pass_input.TabIndex = 5;
             // 
             // confirm_pass
@@ -692,6 +696,17 @@ namespace DB_PROJECT
             this.Rst_pas_Phn_lbl.Text = "Phone Number:";
             this.Rst_pas_Phn_lbl.Click += new System.EventHandler(this.Rst_pas_Phn_lbl_Click);
             // 
+            // ShowPassword
+            // 
+            this.ShowPassword.AutoSize = true;
+            this.ShowPassword.Location = new System.Drawing.Point(32, 417);
+            this.ShowPassword.Name = "ShowPassword";
+            this.ShowPassword.Size = new System.Drawing.Size(102, 17);
+            this.ShowPassword.TabIndex = 8;
+            this.ShowPassword.Text = "Show Password";
+            this.ShowPassword.UseVisualStyleBackColor = true;
+            this.ShowPassword.CheckedChanged += new System.EventHandler(this.ShowPassword_CheckedChanged);
+            // 
             // Main_Screen
             // 
             this.AllowDrop = true;
@@ -701,13 +716,13 @@ namespace DB_PROJECT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(963, 618);
-            this.Controls.Add(this.SignUp_panel);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.close_picture);
             this.Controls.Add(this.minimize_pictureBox);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.SignUp_panel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel_Forget_pass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -787,5 +802,6 @@ namespace DB_PROJECT
         private System.Windows.Forms.TextBox phone_number_input;
         private System.Windows.Forms.Label address_lbl;
         private System.Windows.Forms.Label phNo_lbl;
+        private System.Windows.Forms.CheckBox ShowPassword;
     }
 }

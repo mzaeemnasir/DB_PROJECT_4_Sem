@@ -33,6 +33,8 @@ namespace DB_PROJECT
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'bookRackDataSet.Books' table. You can move, or remove it, as needed.
+            this.booksTableAdapter.Fill(this.bookRackDataSet.Books);
             con.Open();
             string file_location = "";
             string query_text = @"SELECT userImage FROM [User_information] Where  email = '"+userEmail+"'";
@@ -337,7 +339,9 @@ namespace DB_PROJECT
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query_txt, con);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
+               
                 DGV.DataSource = dataTable;
+
                 con.Close();
             }
 
@@ -377,6 +381,133 @@ namespace DB_PROJECT
             }
             else
                 MessageBox.Show("Filters are empty");
+        }
+
+        private void PS1_MouseHover(object sender, EventArgs e)
+        {
+            PS1.BackColor = Color.DarkRed;
+            PS1.ForeColor = Color.White;
+        }
+
+        private void PS1_MouseLeave(object sender, EventArgs e)
+        {
+            PS1.BackColor = Color.Transparent;
+            PS1.ForeColor = Color.Black;
+        }
+
+        private void PS2_MouseHover(object sender, EventArgs e)
+        {
+
+            PS2.BackColor = Color.DarkRed;
+            PS2.ForeColor = Color.White;
+        }
+
+        private void PS2_MouseLeave(object sender, EventArgs e)
+        {
+            PS2.BackColor = Color.Transparent;
+            PS2.ForeColor = Color.Black;
+        }
+
+        private void PS3_MouseHover(object sender, EventArgs e)
+        {
+            PS3.BackColor = Color.DarkRed;
+            PS3.ForeColor = Color.White;
+        }
+
+        private void PS3_MouseLeave(object sender, EventArgs e)
+        {
+            PS3.BackColor = Color.Transparent;
+            PS3.ForeColor = Color.Black;
+        }
+
+        private void PS4_MouseHover(object sender, EventArgs e)
+        {
+            PS4.BackColor = Color.DarkRed;
+            PS4.ForeColor = Color.White;
+        }
+
+        private void PS4_MouseLeave(object sender, EventArgs e)
+        {
+            PS4.BackColor = Color.Transparent;
+            PS4.ForeColor = Color.Black;
+        }
+
+        private void PS5_MouseHover(object sender, EventArgs e)
+        {
+            PS5.BackColor = Color.DarkRed;
+            PS5.ForeColor = Color.White;
+        }
+
+        private void PS5_MouseLeave(object sender, EventArgs e)
+        {
+            PS5.BackColor = Color.Transparent;
+            PS5.ForeColor = Color.Black;
+        }
+
+        private void PS1_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            // if only combobox has txt
+            string query_txt = @"Select * From Books where genre = 'Science fiction' ";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query_txt, con);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            DGV.DataSource = dataTable;
+
+            con.Close();
+        }
+
+        private void PS2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            // if only combobox has txt
+            string query_txt = @"Select * From Books where genre = 'Action & Adventure' ";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query_txt, con);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+          //  DGV.RowTemplate.Height = 140;
+            DGV.DataSource = dataTable;
+            con.Close();
+        }
+
+        private void PS3_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            // if only combobox has txt
+            string query_txt = @"Select * From Books where genre = 'History' ";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query_txt, con);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            
+            DGV.DataSource = dataTable;
+
+            con.Close();
+        }
+
+        private void PS4_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            // if only combobox has txt
+            string query_txt = @"Select * From Books where genre = 'Crime' ";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query_txt, con);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            
+            DGV.DataSource = dataTable;
+
+            con.Close();
+        }
+
+        private void PS5_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query_txt = @"Select * From Books Where genre = 'Encyclopedia' ";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query_txt, con);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            
+            DGV.DataSource = dataTable;
+            con.Close();
         }
     }
 }

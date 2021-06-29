@@ -254,5 +254,14 @@ namespace DB_PROJECT
                 button2_Click(sender, e);
             }
         }
+
+        private void ShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ShowPassword.Checked)
+            {
+                pass_input.PasswordChar = '\0';
+                cnfrm_pass_input.PasswordChar = '\0';
+            }
+        }
     }
 }

@@ -47,10 +47,10 @@ namespace DB_PROJECT
             this.label4 = new System.Windows.Forms.Label();
             this.bookgenreBox = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.bookFormatBox = new System.Windows.Forms.ComboBox();
-            this.publicationYear = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.bookPrice = new System.Windows.Forms.TextBox();
+            this.publicationYear = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -160,7 +160,7 @@ namespace DB_PROJECT
             this.bookName.Multiline = true;
             this.bookName.Name = "bookName";
             this.bookName.Size = new System.Drawing.Size(307, 40);
-            this.bookName.TabIndex = 25;
+            this.bookName.TabIndex = 0;
             this.bookName.Text = "Enter Book Title";
             this.bookName.Enter += new System.EventHandler(this.bookName_Enter);
             this.bookName.Leave += new System.EventHandler(this.bookName_Leave);
@@ -173,7 +173,7 @@ namespace DB_PROJECT
             this.bookarthor.Multiline = true;
             this.bookarthor.Name = "bookarthor";
             this.bookarthor.Size = new System.Drawing.Size(307, 40);
-            this.bookarthor.TabIndex = 25;
+            this.bookarthor.TabIndex = 1;
             this.bookarthor.Text = "Enter Arthor Name";
             this.bookarthor.Enter += new System.EventHandler(this.bookarthor_Enter);
             this.bookarthor.Leave += new System.EventHandler(this.bookarthor_Leave);
@@ -185,7 +185,7 @@ namespace DB_PROJECT
             this.label1.Location = new System.Drawing.Point(118, 452);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 32);
-            this.label1.TabIndex = 26;
+            this.label1.TabIndex = 7;
             this.label1.Text = "Upload Image";
             // 
             // label2
@@ -205,7 +205,7 @@ namespace DB_PROJECT
             this.label5.Location = new System.Drawing.Point(86, 341);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 22);
-            this.label5.TabIndex = 26;
+            this.label5.TabIndex = 4;
             this.label5.Text = "Book Genre";
             // 
             // label3
@@ -243,7 +243,7 @@ namespace DB_PROJECT
             this.bookgenreBox.Location = new System.Drawing.Point(216, 344);
             this.bookgenreBox.Name = "bookgenreBox";
             this.bookgenreBox.Size = new System.Drawing.Size(181, 21);
-            this.bookgenreBox.TabIndex = 27;
+            this.bookgenreBox.TabIndex = 5;
             this.bookgenreBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel2
@@ -263,11 +263,24 @@ namespace DB_PROJECT
             this.panel2.Controls.Add(this.bookName);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(311, 59);
+            this.panel2.Location = new System.Drawing.Point(296, 59);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(477, 538);
             this.panel2.TabIndex = 24;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.s);
+            // 
+            // bookFormatBox
+            // 
+            this.bookFormatBox.FormattingEnabled = true;
+            this.bookFormatBox.Items.AddRange(new object[] {
+            "Audible Audiobook",
+            "Soft Book",
+            "Hard Book"});
+            this.bookFormatBox.Location = new System.Drawing.Point(216, 386);
+            this.bookFormatBox.Name = "bookFormatBox";
+            this.bookFormatBox.Size = new System.Drawing.Size(181, 21);
+            this.bookFormatBox.TabIndex = 6;
+            this.bookFormatBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -279,23 +292,18 @@ namespace DB_PROJECT
             this.label7.TabIndex = 26;
             this.label7.Text = "Book Format";
             // 
-            // bookFormatBox
+            // bookPrice
             // 
-            this.bookFormatBox.FormattingEnabled = true;
-            this.bookFormatBox.Items.AddRange(new object[] {
-            "Action and adventure",
-            "Biography",
-            "Classic",
-            "Crime",
-            "Encyclopedia",
-            "History",
-            "Horror",
-            "Science fiction"});
-            this.bookFormatBox.Location = new System.Drawing.Point(216, 386);
-            this.bookFormatBox.Name = "bookFormatBox";
-            this.bookFormatBox.Size = new System.Drawing.Size(181, 21);
-            this.bookFormatBox.TabIndex = 27;
-            this.bookFormatBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.bookPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookPrice.ForeColor = System.Drawing.Color.Silver;
+            this.bookPrice.Location = new System.Drawing.Point(90, 289);
+            this.bookPrice.Multiline = true;
+            this.bookPrice.Name = "bookPrice";
+            this.bookPrice.Size = new System.Drawing.Size(307, 40);
+            this.bookPrice.TabIndex = 3;
+            this.bookPrice.Text = "Enter Book Price";
+            this.bookPrice.Enter += new System.EventHandler(this.bookPrice_Enter);
+            this.bookPrice.Leave += new System.EventHandler(this.bookPrice_Leave);
             // 
             // publicationYear
             // 
@@ -305,23 +313,10 @@ namespace DB_PROJECT
             this.publicationYear.Multiline = true;
             this.publicationYear.Name = "publicationYear";
             this.publicationYear.Size = new System.Drawing.Size(307, 40);
-            this.publicationYear.TabIndex = 25;
+            this.publicationYear.TabIndex = 2;
             this.publicationYear.Text = "Enter Publication Year";
             this.publicationYear.Enter += new System.EventHandler(this.publicationYear_Enter);
             this.publicationYear.Leave += new System.EventHandler(this.publicationYear_Leave);
-            // 
-            // bookPrice
-            // 
-            this.bookPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookPrice.ForeColor = System.Drawing.Color.Silver;
-            this.bookPrice.Location = new System.Drawing.Point(90, 289);
-            this.bookPrice.Multiline = true;
-            this.bookPrice.Name = "bookPrice";
-            this.bookPrice.Size = new System.Drawing.Size(307, 40);
-            this.bookPrice.TabIndex = 25;
-            this.bookPrice.Text = "Enter Book Price";
-            this.bookPrice.Enter += new System.EventHandler(this.bookPrice_Enter);
-            this.bookPrice.Leave += new System.EventHandler(this.bookPrice_Leave);
             // 
             // Form4
             // 

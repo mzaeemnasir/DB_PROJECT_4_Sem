@@ -9057,27 +9057,24 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMdu2/4HhGxg8A+6j5MAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAOLSURBVGhD7ZpJaxRRFIVDRAmK4hCjRlHEuBAFs/MXiKDoJpGgERcBSVQMTgvduZc47AV/gOhO
-        0LW6UFAcN6IibuMQ59n4ndc3TUatekN3mq4PDuS96nvuraTy6vWtaigoKCgoqFeGh4cXoU50Bl1Hr9Db
-        cdKcjg2gDrTQwmsDCl6A+tBN9BvlRTE3UC+ab7bTD4prRforfUSxkNdptNTSVB+KaUKn0FeUii9IOZos
-        bXWggDZ0D1WKu2iNpa8sJN6B3quKCjOEtlkZlYGEx9EfZa8Syn3MykkLifa7lNVHJ91rZaWBBF3I51aT
-        il+o08qLC8btKOVK7Itq2mhlxgHDWeih3AN4jI6g9ajZtAEdRU9QCPfRTCs3HMxOOFs/vqODaIbZTUDH
-        UD/6gXw5bnZhYLQcfXKW+dHJbjar/8Jnt1iMDx9Q+I4Mk/POzo/cqygxB0qhXgyYjR8YLEba1vnwCDWa
-        lYPxSnQZDZquoDY77GCsy9v3f/ozajar/BB82Nn40W82DsY6WX0dHM8btMI+5mCsxc2XQ2aTH4JD9snr
-        zMbBWH/ZqbhkH3Mw1urtyx2zyQeB+roXwlyzcjDWojIVQ/YxB+N5pWkvtANbYlbZIWi3C68Mg5bWwXh2
-        adqbLrPKDkEhq3NeLlhaB+OQS1qcNavsEHStFJucF6jF0joY69tYCFfNKjsEPS/FJuUZWm0pHYzVQdEv
-        IYSnZpcdgnS7SInutcssXRnmzrmjYYxZEzJBkO8WLwsv0ZjLWDDX446G880ss0NQyEb+X/xE7ZamDHO7
-        kL7fxsDrhFNd0hctRRnmulGskxVel3SqRWuTpXAw3olinqzwWrRS3ZbmWAoHY/0/x8brtlTJjUdsvDYe
-        atjVKh12GtkhqAVVs/fsi7qqfk8gCbztLGqLW1Z+fghW863W6LPy80NwSItnMrSZUQd0lUk/x9zghLV4
-        BAYxV+sTZluGuZOlQ1EIa+IJTELatONpNdsyzMk/BnHatAKjkEb8aCYUxFxoK2mEOI14gZketTxwtmGk
-        uqTVbIz3qEVguBaFPgAfWbS0GEoxFq13KM1bARhvR/p6N11QLVutvDSQYJ9LVX20C+yxstJCoj0oVYMg
-        C+rGdFs5lYGE9fNSywgkrp/XlkaggEa0F71GqZC3cox5GllVKKY+Xj0cD8XVx8ulk0HBk70+PPopon6u
-        7deHCwoKCgqi0dDwF5A2QIo9CJBRAAAAAElFTkSuQmCC
-</value>
-  </data>
+  <metadata name="bookRackDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="booksBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>165, 17</value>
+  </metadata>
+  <metadata name="booksTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>329, 17</value>
+  </metadata>
+  <metadata name="booksBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>487, 17</value>
+  </metadata>
+  <metadata name="booksBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>165, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERET
