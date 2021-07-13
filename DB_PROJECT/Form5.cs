@@ -10,16 +10,19 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
 using System.Reflection;
-
 namespace DB_PROJECT
 {
     public partial class Form5 : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=BookRack;Integrated Security=True");
         public static string userEmail = "";
+        public static string fullName = "";
+        public static string Address = "";
+        public static string Phone = "";
         int move;
         int X_axis;
         int Y_axis;
+        int id;
 
         public Form5()
         {
@@ -33,6 +36,13 @@ namespace DB_PROJECT
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            buyPanel.Hide();
+            email_txbox_disabled.Text = userEmail;
+            profie_address_input.Text = Address;
+            profile_ph_input.Text = Phone;
+            profile_name_input.Text = fullName;
+            Email_box_disabled_cng_pass.Text = userEmail;
+
             // TODO: This line of code loads data into the 'bookRackDataSet.Books' table. You can move, or remove it, as needed.
             this.booksTableAdapter.Fill(this.bookRackDataSet.Books);
             con.Open();
@@ -43,11 +53,10 @@ namespace DB_PROJECT
             if(Reader.Read())
             {
                 file_location = Reader["userImage"].ToString();
-                MessageBox.Show(file_location);
                 // if there is no image the use the deafult one 
                 if(file_location== "" || file_location == "NULL")  
                 {
-                   file_location = @"G: \UNIVERSITY\Smester no. 4\DB LAB\DB PROJECT\user_images\defautavatar.png";
+                   file_location = @"G:\UNIVERSITY\Smester no. 4\DB LAB\DB PROJECT\user_images\defautavatar.png";
                     profilePicture.ImageLocation = file_location;
                     update_profile_picture.ImageLocation = file_location;
                     update_profile_picture.SizeMode = PictureBoxSizeMode.Zoom;
@@ -146,7 +155,7 @@ namespace DB_PROJECT
         private void save_changes_pass_chng_Click(object sender, EventArgs e)
         {
             // if the inputed passwords are correct then chnge the password in the database 
-            if(password_input.Text == cnfrm_pas_input.Text && String.IsNullOrEmpty(password_input.ToString()))
+            if(password_input.Text == cnfrm_pas_input.Text && password_input.Text != "" )
             {
                 con.Open();
                 string query_txt = @"Update User_information Set userPassword = '" +password_input.Text+"'  where email = '"+userEmail+"'";
@@ -354,7 +363,7 @@ namespace DB_PROJECT
                 con.Open();
                 string query_txt = @"Select * From Books where genre = '" + comboBox1.Text + "' AND bookFormat = '"+comboBox2.Text+"' ";
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query_txt, con);
-                MessageBox.Show(query_txt); 
+               
                 DataTable dataTable  = new DataTable();
                 dataAdapter.Fill(dataTable);
                 DGV.DataSource= dataTable;
@@ -367,7 +376,11 @@ namespace DB_PROJECT
                 // if only combobox has txt
                 string query_txt = @"Select * From Books where genre = '" + comboBox1.Text + "' ";
                 SqlCommand query = new SqlCommand(query_txt, con);
-                // Gether data
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query_txt, con);
+
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                DGV.DataSource = dataTable;
                 con.Close();
             }
             else if (comboBox2.Text != "")
@@ -376,7 +389,12 @@ namespace DB_PROJECT
                 // if only combobox has txt
                 string query_txt = @"Select * From Books where bookFormat = '" + comboBox2.Text + "' ";
                 SqlCommand query = new SqlCommand(query_txt, con);
-                //Gether data
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query_txt, con);
+
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                DGV.DataSource = dataTable;
+
                 con.Close();
             }
             else
@@ -507,6 +525,57 @@ namespace DB_PROJECT
             dataAdapter.Fill(dataTable);
             
             DGV.DataSource = dataTable;
+            con.Close();
+        }
+
+        private void clrFltr_Click(object sender, EventArgs e)
+        {
+            comboBox1.ResetText();
+            comboBox2.ResetText();
+        }
+
+        private void DGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            name_ofBook.Text = DGV.Rows[e.RowIndex].Cells["bookName"].FormattedValue.ToString();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+         //   con.Open();
+            buyPanel.Show();
+            if (DGV.Rows[e.RowIndex].Cells[e.ColumnIndex].Value !=null)
+            {
+
+                id =Convert.ToInt32( DGV.Rows[e.RowIndex].Cells["bookId"].FormattedValue);
+                name_ofBook.Text = DGV.Rows[e.RowIndex].Cells["bookName"].FormattedValue.ToString();
+                price_ofBook.Text ="$ "+DGV.Rows[e.RowIndex].Cells["bookprice"].FormattedValue.ToString();
+                Author_of_book.Text = DGV.Rows[e.RowIndex].Cells["bookAuthor"].FormattedValue.ToString();
+                Bookpreview.ImageLocation = DGV.Rows[e.RowIndex].Cells["bookImg"].FormattedValue.ToString();
+            }
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            buyPanel.Hide();
+        }
+
+        private void buy_btn_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string url = "";
+            string query_txt = @"Select bookUrl From buyBooks Where bookId = (Select bookId From Books Where bookName = '"+name_ofBook.Text+"' AND  bookAuthor = '"+Author_of_book.Text+"' )";
+            SqlCommand query = new SqlCommand(query_txt, con);
+            SqlDataReader reader = query.ExecuteReader();
+            if(reader.Read())
+            {
+                url = reader["bookUrl"].ToString();
+            }
+            System.Diagnostics.Process.Start(url);
             con.Close();
         }
     }

@@ -196,8 +196,9 @@ namespace DB_PROJECT
             // SQL - Server Query
             string query_text = @"SELECT * FROM BookRack.dbo.User_information Where email = '"+Email.Text+"' AND userPassword = '"+password.Text+"' ";
             SqlDataAdapter query = new SqlDataAdapter(query_text,con);
+          
 
-        //creating virtual table For Password or Email Validation
+                //creating virtual table For Password or Email Validation
 
             DataTable dataTable = new DataTable();
             query.Fill(dataTable);
@@ -211,7 +212,17 @@ namespace DB_PROJECT
                // Form4 f4 = new Form4();
                 //f4.Show();
                 Form f5 = new Form5();
+                SqlCommand command = new SqlCommand(query_text, con);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    Form5.Address = reader["userAddress"].ToString();
+                    Form5.fullName = reader["fullName"].ToString();
+                    Form5.Phone = reader["userPhone"].ToString();
+                }
+
                 Form5.userEmail = Email.Text;
+                
                 f5.Show();
             }
 
@@ -261,6 +272,11 @@ namespace DB_PROJECT
             {
                 pass_input.PasswordChar = '\0';
                 cnfrm_pass_input.PasswordChar = '\0';
+            }
+            else
+            {
+                pass_input.PasswordChar = '*';
+                cnfrm_pass_input.PasswordChar = '*';
             }
         }
     }

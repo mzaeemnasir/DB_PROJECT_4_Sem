@@ -74,34 +74,37 @@ namespace DB_PROJECT
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buyPanel = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.buy_btn = new System.Windows.Forms.Button();
+            this.Author_of_book = new System.Windows.Forms.Label();
+            this.price_ofBook = new System.Windows.Forms.Label();
+            this.name_ofBook = new System.Windows.Forms.Label();
+            this.book_author_lbl = new System.Windows.Forms.Label();
+            this.price_lbl_buy_panel = new System.Windows.Forms.Label();
+            this.name_lbl_buy_pnl = new System.Windows.Forms.Label();
+            this.Bookpreview = new System.Windows.Forms.PictureBox();
+            this.DGV = new System.Windows.Forms.DataGridView();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.PS5 = new System.Windows.Forms.Button();
+            this.PS4 = new System.Windows.Forms.Button();
+            this.PS3 = new System.Windows.Forms.Button();
+            this.PS2 = new System.Windows.Forms.Button();
+            this.PS1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.search_input = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.clrFltr = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.genre_llbl = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.bookRackDataSet = new DB_PROJECT.BookRackDataSet();
             this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookRackDataSet = new DB_PROJECT.BookRackDataSet();
             this.booksTableAdapter = new DB_PROJECT.BookRackDataSetTableAdapters.BooksTableAdapter();
             this.booksBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.PS1 = new System.Windows.Forms.Button();
-            this.PS2 = new System.Windows.Forms.Button();
-            this.PS3 = new System.Windows.Forms.Button();
-            this.PS4 = new System.Windows.Forms.Button();
-            this.PS5 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.DGV = new System.Windows.Forms.DataGridView();
-            this.bookIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookAuthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.publicationYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookFormatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookImgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -119,11 +122,14 @@ namespace DB_PROJECT
             this.password_chng_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookRackDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.buyPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bookpreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookRackDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -255,6 +261,7 @@ namespace DB_PROJECT
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(52, 402);
@@ -377,6 +384,7 @@ namespace DB_PROJECT
             // profile_ph_input
             // 
             this.profile_ph_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_ph_input.ForeColor = System.Drawing.Color.Silver;
             this.profile_ph_input.Location = new System.Drawing.Point(263, 418);
             this.profile_ph_input.Name = "profile_ph_input";
             this.profile_ph_input.Size = new System.Drawing.Size(324, 38);
@@ -385,6 +393,7 @@ namespace DB_PROJECT
             // profie_address_input
             // 
             this.profie_address_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profie_address_input.ForeColor = System.Drawing.Color.Silver;
             this.profie_address_input.Location = new System.Drawing.Point(263, 313);
             this.profie_address_input.Name = "profie_address_input";
             this.profie_address_input.Size = new System.Drawing.Size(324, 38);
@@ -393,6 +402,7 @@ namespace DB_PROJECT
             // profile_name_input
             // 
             this.profile_name_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_name_input.ForeColor = System.Drawing.Color.Silver;
             this.profile_name_input.Location = new System.Drawing.Point(263, 210);
             this.profile_name_input.Name = "profile_name_input";
             this.profile_name_input.Size = new System.Drawing.Size(324, 38);
@@ -430,7 +440,7 @@ namespace DB_PROJECT
             this.cancel_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancel_button.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel_button.ForeColor = System.Drawing.Color.White;
-            this.cancel_button.Location = new System.Drawing.Point(696, 514);
+            this.cancel_button.Location = new System.Drawing.Point(882, 523);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(80, 27);
             this.cancel_button.TabIndex = 20;
@@ -444,7 +454,7 @@ namespace DB_PROJECT
             this.save_changes_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.save_changes_btn.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save_changes_btn.ForeColor = System.Drawing.Color.White;
-            this.save_changes_btn.Location = new System.Drawing.Point(654, 455);
+            this.save_changes_btn.Location = new System.Drawing.Point(17, 523);
             this.save_changes_btn.Name = "save_changes_btn";
             this.save_changes_btn.Size = new System.Drawing.Size(154, 27);
             this.save_changes_btn.TabIndex = 20;
@@ -458,7 +468,7 @@ namespace DB_PROJECT
             this.change_password_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.change_password_btn.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.change_password_btn.ForeColor = System.Drawing.Color.White;
-            this.change_password_btn.Location = new System.Drawing.Point(333, 505);
+            this.change_password_btn.Location = new System.Drawing.Point(199, 476);
             this.change_password_btn.Name = "change_password_btn";
             this.change_password_btn.Size = new System.Drawing.Size(196, 27);
             this.change_password_btn.TabIndex = 20;
@@ -657,11 +667,13 @@ namespace DB_PROJECT
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.buyPanel);
             this.panel3.Controls.Add(this.DGV);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.search_input);
             this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.clrFltr);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.search_img);
@@ -674,6 +686,256 @@ namespace DB_PROJECT
             this.panel3.Size = new System.Drawing.Size(985, 574);
             this.panel3.TabIndex = 24;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // buyPanel
+            // 
+            this.buyPanel.Controls.Add(this.pictureBox7);
+            this.buyPanel.Controls.Add(this.buy_btn);
+            this.buyPanel.Controls.Add(this.Author_of_book);
+            this.buyPanel.Controls.Add(this.price_ofBook);
+            this.buyPanel.Controls.Add(this.name_ofBook);
+            this.buyPanel.Controls.Add(this.book_author_lbl);
+            this.buyPanel.Controls.Add(this.price_lbl_buy_panel);
+            this.buyPanel.Controls.Add(this.name_lbl_buy_pnl);
+            this.buyPanel.Controls.Add(this.Bookpreview);
+            this.buyPanel.Location = new System.Drawing.Point(0, 2);
+            this.buyPanel.Name = "buyPanel";
+            this.buyPanel.Size = new System.Drawing.Size(822, 310);
+            this.buyPanel.TabIndex = 24;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(8, 36);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(59, 46);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 4;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // buy_btn
+            // 
+            this.buy_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.buy_btn.FlatAppearance.BorderSize = 0;
+            this.buy_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buy_btn.Location = new System.Drawing.Point(520, 249);
+            this.buy_btn.Name = "buy_btn";
+            this.buy_btn.Size = new System.Drawing.Size(107, 39);
+            this.buy_btn.TabIndex = 3;
+            this.buy_btn.Text = "Buy Now";
+            this.buy_btn.UseVisualStyleBackColor = false;
+            this.buy_btn.Click += new System.EventHandler(this.buy_btn_Click);
+            // 
+            // Author_of_book
+            // 
+            this.Author_of_book.AutoSize = true;
+            this.Author_of_book.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Author_of_book.ForeColor = System.Drawing.Color.DarkRed;
+            this.Author_of_book.Location = new System.Drawing.Point(584, 171);
+            this.Author_of_book.Name = "Author_of_book";
+            this.Author_of_book.Size = new System.Drawing.Size(77, 27);
+            this.Author_of_book.TabIndex = 2;
+            this.Author_of_book.Text = "Name:";
+            // 
+            // price_ofBook
+            // 
+            this.price_ofBook.AutoSize = true;
+            this.price_ofBook.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price_ofBook.ForeColor = System.Drawing.Color.DarkRed;
+            this.price_ofBook.Location = new System.Drawing.Point(584, 104);
+            this.price_ofBook.Name = "price_ofBook";
+            this.price_ofBook.Size = new System.Drawing.Size(77, 27);
+            this.price_ofBook.TabIndex = 2;
+            this.price_ofBook.Text = "Name:";
+            // 
+            // name_ofBook
+            // 
+            this.name_ofBook.AutoSize = true;
+            this.name_ofBook.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_ofBook.ForeColor = System.Drawing.Color.DarkRed;
+            this.name_ofBook.Location = new System.Drawing.Point(583, 36);
+            this.name_ofBook.Name = "name_ofBook";
+            this.name_ofBook.Size = new System.Drawing.Size(77, 27);
+            this.name_ofBook.TabIndex = 2;
+            this.name_ofBook.Text = "Name:";
+            // 
+            // book_author_lbl
+            // 
+            this.book_author_lbl.AutoSize = true;
+            this.book_author_lbl.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.book_author_lbl.Location = new System.Drawing.Point(431, 170);
+            this.book_author_lbl.Name = "book_author_lbl";
+            this.book_author_lbl.Size = new System.Drawing.Size(151, 27);
+            this.book_author_lbl.TabIndex = 1;
+            this.book_author_lbl.Text = "Book Author:";
+            this.book_author_lbl.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // price_lbl_buy_panel
+            // 
+            this.price_lbl_buy_panel.AutoSize = true;
+            this.price_lbl_buy_panel.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price_lbl_buy_panel.Location = new System.Drawing.Point(431, 102);
+            this.price_lbl_buy_panel.Name = "price_lbl_buy_panel";
+            this.price_lbl_buy_panel.Size = new System.Drawing.Size(72, 27);
+            this.price_lbl_buy_panel.TabIndex = 1;
+            this.price_lbl_buy_panel.Text = "Price:";
+            // 
+            // name_lbl_buy_pnl
+            // 
+            this.name_lbl_buy_pnl.AutoSize = true;
+            this.name_lbl_buy_pnl.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_lbl_buy_pnl.Location = new System.Drawing.Point(431, 35);
+            this.name_lbl_buy_pnl.Name = "name_lbl_buy_pnl";
+            this.name_lbl_buy_pnl.Size = new System.Drawing.Size(79, 27);
+            this.name_lbl_buy_pnl.TabIndex = 1;
+            this.name_lbl_buy_pnl.Text = "Name:";
+            // 
+            // Bookpreview
+            // 
+            this.Bookpreview.Location = new System.Drawing.Point(86, 35);
+            this.Bookpreview.Name = "Bookpreview";
+            this.Bookpreview.Size = new System.Drawing.Size(236, 228);
+            this.Bookpreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Bookpreview.TabIndex = 0;
+            this.Bookpreview.TabStop = false;
+            // 
+            // DGV
+            // 
+            this.DGV.AllowUserToAddRows = false;
+            this.DGV.AllowUserToDeleteRows = false;
+            this.DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV.Location = new System.Drawing.Point(0, 313);
+            this.DGV.Name = "DGV";
+            this.DGV.ReadOnly = true;
+            this.DGV.Size = new System.Drawing.Size(822, 258);
+            this.DGV.TabIndex = 23;
+            this.DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CellClick);
+            this.DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CellContentClick);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.PS5);
+            this.panel6.Controls.Add(this.PS4);
+            this.panel6.Controls.Add(this.PS3);
+            this.panel6.Controls.Add(this.PS2);
+            this.panel6.Controls.Add(this.PS1);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(822, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(163, 574);
+            this.panel6.TabIndex = 23;
+            // 
+            // PS5
+            // 
+            this.PS5.BackColor = System.Drawing.Color.Transparent;
+            this.PS5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PS5.FlatAppearance.BorderSize = 0;
+            this.PS5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PS5.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PS5.ForeColor = System.Drawing.Color.Black;
+            this.PS5.Location = new System.Drawing.Point(4, 476);
+            this.PS5.Name = "PS5";
+            this.PS5.Size = new System.Drawing.Size(154, 44);
+            this.PS5.TabIndex = 22;
+            this.PS5.Text = "Enclylopedia";
+            this.PS5.UseVisualStyleBackColor = false;
+            this.PS5.Click += new System.EventHandler(this.PS5_Click);
+            this.PS5.MouseLeave += new System.EventHandler(this.PS5_MouseLeave);
+            this.PS5.MouseHover += new System.EventHandler(this.PS5_MouseHover);
+            // 
+            // PS4
+            // 
+            this.PS4.BackColor = System.Drawing.Color.Transparent;
+            this.PS4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PS4.FlatAppearance.BorderSize = 0;
+            this.PS4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PS4.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PS4.ForeColor = System.Drawing.Color.Black;
+            this.PS4.Location = new System.Drawing.Point(4, 379);
+            this.PS4.Name = "PS4";
+            this.PS4.Size = new System.Drawing.Size(154, 44);
+            this.PS4.TabIndex = 22;
+            this.PS4.Text = "Crime";
+            this.PS4.UseVisualStyleBackColor = false;
+            this.PS4.Click += new System.EventHandler(this.PS4_Click);
+            this.PS4.MouseLeave += new System.EventHandler(this.PS4_MouseLeave);
+            this.PS4.MouseHover += new System.EventHandler(this.PS4_MouseHover);
+            // 
+            // PS3
+            // 
+            this.PS3.BackColor = System.Drawing.Color.Transparent;
+            this.PS3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PS3.FlatAppearance.BorderSize = 0;
+            this.PS3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PS3.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PS3.ForeColor = System.Drawing.Color.Black;
+            this.PS3.Location = new System.Drawing.Point(3, 287);
+            this.PS3.Name = "PS3";
+            this.PS3.Size = new System.Drawing.Size(154, 44);
+            this.PS3.TabIndex = 22;
+            this.PS3.Text = "Historical";
+            this.PS3.UseVisualStyleBackColor = false;
+            this.PS3.Click += new System.EventHandler(this.PS3_Click);
+            this.PS3.MouseLeave += new System.EventHandler(this.PS3_MouseLeave);
+            this.PS3.MouseHover += new System.EventHandler(this.PS3_MouseHover);
+            // 
+            // PS2
+            // 
+            this.PS2.BackColor = System.Drawing.Color.Transparent;
+            this.PS2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PS2.FlatAppearance.BorderSize = 0;
+            this.PS2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PS2.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PS2.ForeColor = System.Drawing.Color.Black;
+            this.PS2.Location = new System.Drawing.Point(4, 200);
+            this.PS2.Name = "PS2";
+            this.PS2.Size = new System.Drawing.Size(154, 44);
+            this.PS2.TabIndex = 22;
+            this.PS2.Text = "Action & Adventure";
+            this.PS2.UseVisualStyleBackColor = false;
+            this.PS2.Click += new System.EventHandler(this.PS2_Click);
+            this.PS2.MouseLeave += new System.EventHandler(this.PS2_MouseLeave);
+            this.PS2.MouseHover += new System.EventHandler(this.PS2_MouseHover);
+            // 
+            // PS1
+            // 
+            this.PS1.BackColor = System.Drawing.Color.Transparent;
+            this.PS1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PS1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PS1.FlatAppearance.BorderSize = 0;
+            this.PS1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PS1.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PS1.ForeColor = System.Drawing.Color.Black;
+            this.PS1.Location = new System.Drawing.Point(4, 115);
+            this.PS1.Name = "PS1";
+            this.PS1.Size = new System.Drawing.Size(154, 44);
+            this.PS1.TabIndex = 22;
+            this.PS1.Text = "Science Fiction";
+            this.PS1.UseVisualStyleBackColor = false;
+            this.PS1.Click += new System.EventHandler(this.PS1_Click);
+            this.PS1.MouseLeave += new System.EventHandler(this.PS1_MouseLeave);
+            this.PS1.MouseHover += new System.EventHandler(this.PS1_MouseHover);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 25);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Popular Subjects";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(820, 27);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(2, 558);
+            this.panel4.TabIndex = 5;
             // 
             // search_input
             // 
@@ -695,6 +957,22 @@ namespace DB_PROJECT
             this.panel5.Size = new System.Drawing.Size(313, 2);
             this.panel5.TabIndex = 4;
             // 
+            // clrFltr
+            // 
+            this.clrFltr.AutoSize = true;
+            this.clrFltr.BackColor = System.Drawing.Color.DarkRed;
+            this.clrFltr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.clrFltr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clrFltr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.clrFltr.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clrFltr.ForeColor = System.Drawing.Color.White;
+            this.clrFltr.Location = new System.Drawing.Point(621, 82);
+            this.clrFltr.Name = "clrFltr";
+            this.clrFltr.Size = new System.Drawing.Size(105, 24);
+            this.clrFltr.TabIndex = 5;
+            this.clrFltr.Text = "Clear Filter";
+            this.clrFltr.Click += new System.EventHandler(this.clrFltr_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -704,7 +982,7 @@ namespace DB_PROJECT
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(670, 83);
+            this.label6.Location = new System.Drawing.Point(748, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 24);
             this.label6.TabIndex = 5;
@@ -747,7 +1025,7 @@ namespace DB_PROJECT
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Action and adventure",
+            "Action & Adventure",
             "Biography",
             "Classic",
             "Crime",
@@ -760,15 +1038,15 @@ namespace DB_PROJECT
             this.comboBox1.Size = new System.Drawing.Size(126, 21);
             this.comboBox1.TabIndex = 6;
             // 
-            // bookRackDataSet
-            // 
-            this.bookRackDataSet.DataSetName = "BookRackDataSet";
-            this.bookRackDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // booksBindingSource
             // 
             this.booksBindingSource.DataMember = "Books";
             this.booksBindingSource.DataSource = this.bookRackDataSet;
+            // 
+            // bookRackDataSet
+            // 
+            this.bookRackDataSet.DataSetName = "BookRackDataSet";
+            this.bookRackDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // booksTableAdapter
             // 
@@ -778,201 +1056,6 @@ namespace DB_PROJECT
             // 
             this.booksBindingSource1.DataMember = "Books";
             this.booksBindingSource1.DataSource = this.bookRackDataSet;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(820, 27);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(2, 558);
-            this.panel4.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 25);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Popular Subjects";
-            // 
-            // PS1
-            // 
-            this.PS1.BackColor = System.Drawing.Color.Transparent;
-            this.PS1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PS1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PS1.FlatAppearance.BorderSize = 0;
-            this.PS1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PS1.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PS1.ForeColor = System.Drawing.Color.Black;
-            this.PS1.Location = new System.Drawing.Point(4, 115);
-            this.PS1.Name = "PS1";
-            this.PS1.Size = new System.Drawing.Size(154, 44);
-            this.PS1.TabIndex = 22;
-            this.PS1.Text = "Science Fiction";
-            this.PS1.UseVisualStyleBackColor = false;
-            this.PS1.Click += new System.EventHandler(this.PS1_Click);
-            this.PS1.MouseLeave += new System.EventHandler(this.PS1_MouseLeave);
-            this.PS1.MouseHover += new System.EventHandler(this.PS1_MouseHover);
-            // 
-            // PS2
-            // 
-            this.PS2.BackColor = System.Drawing.Color.Transparent;
-            this.PS2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PS2.FlatAppearance.BorderSize = 0;
-            this.PS2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PS2.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PS2.ForeColor = System.Drawing.Color.Black;
-            this.PS2.Location = new System.Drawing.Point(4, 200);
-            this.PS2.Name = "PS2";
-            this.PS2.Size = new System.Drawing.Size(154, 44);
-            this.PS2.TabIndex = 22;
-            this.PS2.Text = "Action & Adventure";
-            this.PS2.UseVisualStyleBackColor = false;
-            this.PS2.Click += new System.EventHandler(this.PS2_Click);
-            this.PS2.MouseLeave += new System.EventHandler(this.PS2_MouseLeave);
-            this.PS2.MouseHover += new System.EventHandler(this.PS2_MouseHover);
-            // 
-            // PS3
-            // 
-            this.PS3.BackColor = System.Drawing.Color.Transparent;
-            this.PS3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PS3.FlatAppearance.BorderSize = 0;
-            this.PS3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PS3.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PS3.ForeColor = System.Drawing.Color.Black;
-            this.PS3.Location = new System.Drawing.Point(3, 287);
-            this.PS3.Name = "PS3";
-            this.PS3.Size = new System.Drawing.Size(154, 44);
-            this.PS3.TabIndex = 22;
-            this.PS3.Text = "Historical";
-            this.PS3.UseVisualStyleBackColor = false;
-            this.PS3.Click += new System.EventHandler(this.PS3_Click);
-            this.PS3.MouseLeave += new System.EventHandler(this.PS3_MouseLeave);
-            this.PS3.MouseHover += new System.EventHandler(this.PS3_MouseHover);
-            // 
-            // PS4
-            // 
-            this.PS4.BackColor = System.Drawing.Color.Transparent;
-            this.PS4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PS4.FlatAppearance.BorderSize = 0;
-            this.PS4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PS4.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PS4.ForeColor = System.Drawing.Color.Black;
-            this.PS4.Location = new System.Drawing.Point(4, 379);
-            this.PS4.Name = "PS4";
-            this.PS4.Size = new System.Drawing.Size(154, 44);
-            this.PS4.TabIndex = 22;
-            this.PS4.Text = "Crime";
-            this.PS4.UseVisualStyleBackColor = false;
-            this.PS4.Click += new System.EventHandler(this.PS4_Click);
-            this.PS4.MouseLeave += new System.EventHandler(this.PS4_MouseLeave);
-            this.PS4.MouseHover += new System.EventHandler(this.PS4_MouseHover);
-            // 
-            // PS5
-            // 
-            this.PS5.BackColor = System.Drawing.Color.Transparent;
-            this.PS5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PS5.FlatAppearance.BorderSize = 0;
-            this.PS5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PS5.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PS5.ForeColor = System.Drawing.Color.Black;
-            this.PS5.Location = new System.Drawing.Point(4, 476);
-            this.PS5.Name = "PS5";
-            this.PS5.Size = new System.Drawing.Size(154, 44);
-            this.PS5.TabIndex = 22;
-            this.PS5.Text = "Enclylopedia";
-            this.PS5.UseVisualStyleBackColor = false;
-            this.PS5.Click += new System.EventHandler(this.PS5_Click);
-            this.PS5.MouseLeave += new System.EventHandler(this.PS5_MouseLeave);
-            this.PS5.MouseHover += new System.EventHandler(this.PS5_MouseHover);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.PS5);
-            this.panel6.Controls.Add(this.PS4);
-            this.panel6.Controls.Add(this.PS3);
-            this.panel6.Controls.Add(this.PS2);
-            this.panel6.Controls.Add(this.PS1);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(822, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(163, 574);
-            this.panel6.TabIndex = 23;
-            // 
-            // DGV
-            // 
-            this.DGV.AllowUserToAddRows = false;
-            this.DGV.AllowUserToDeleteRows = false;
-            this.DGV.AutoGenerateColumns = false;
-            this.DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bookIdDataGridViewTextBoxColumn,
-            this.bookNameDataGridViewTextBoxColumn,
-            this.bookAuthorDataGridViewTextBoxColumn,
-            this.publicationYearDataGridViewTextBoxColumn,
-            this.bookFormatDataGridViewTextBoxColumn,
-            this.bookpriceDataGridViewTextBoxColumn,
-            this.genreDataGridViewTextBoxColumn,
-            this.bookImgDataGridViewTextBoxColumn});
-            this.DGV.DataSource = this.booksBindingSource;
-            this.DGV.Location = new System.Drawing.Point(0, 313);
-            this.DGV.Name = "DGV";
-            this.DGV.ReadOnly = true;
-            this.DGV.Size = new System.Drawing.Size(822, 258);
-            this.DGV.TabIndex = 23;
-            // 
-            // bookIdDataGridViewTextBoxColumn
-            // 
-            this.bookIdDataGridViewTextBoxColumn.DataPropertyName = "bookId";
-            this.bookIdDataGridViewTextBoxColumn.HeaderText = "bookId";
-            this.bookIdDataGridViewTextBoxColumn.Name = "bookIdDataGridViewTextBoxColumn";
-            this.bookIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bookNameDataGridViewTextBoxColumn
-            // 
-            this.bookNameDataGridViewTextBoxColumn.DataPropertyName = "bookName";
-            this.bookNameDataGridViewTextBoxColumn.HeaderText = "bookName";
-            this.bookNameDataGridViewTextBoxColumn.Name = "bookNameDataGridViewTextBoxColumn";
-            // 
-            // bookAuthorDataGridViewTextBoxColumn
-            // 
-            this.bookAuthorDataGridViewTextBoxColumn.DataPropertyName = "bookAuthor";
-            this.bookAuthorDataGridViewTextBoxColumn.HeaderText = "bookAuthor";
-            this.bookAuthorDataGridViewTextBoxColumn.Name = "bookAuthorDataGridViewTextBoxColumn";
-            // 
-            // publicationYearDataGridViewTextBoxColumn
-            // 
-            this.publicationYearDataGridViewTextBoxColumn.DataPropertyName = "publicationYear";
-            this.publicationYearDataGridViewTextBoxColumn.HeaderText = "publicationYear";
-            this.publicationYearDataGridViewTextBoxColumn.Name = "publicationYearDataGridViewTextBoxColumn";
-            // 
-            // bookFormatDataGridViewTextBoxColumn
-            // 
-            this.bookFormatDataGridViewTextBoxColumn.DataPropertyName = "bookFormat";
-            this.bookFormatDataGridViewTextBoxColumn.HeaderText = "bookFormat";
-            this.bookFormatDataGridViewTextBoxColumn.Name = "bookFormatDataGridViewTextBoxColumn";
-            // 
-            // bookpriceDataGridViewTextBoxColumn
-            // 
-            this.bookpriceDataGridViewTextBoxColumn.DataPropertyName = "bookprice";
-            this.bookpriceDataGridViewTextBoxColumn.HeaderText = "bookprice";
-            this.bookpriceDataGridViewTextBoxColumn.Name = "bookpriceDataGridViewTextBoxColumn";
-            // 
-            // genreDataGridViewTextBoxColumn
-            // 
-            this.genreDataGridViewTextBoxColumn.DataPropertyName = "genre";
-            this.genreDataGridViewTextBoxColumn.HeaderText = "genre";
-            this.genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
-            // 
-            // bookImgDataGridViewTextBoxColumn
-            // 
-            this.bookImgDataGridViewTextBoxColumn.DataPropertyName = "bookImg";
-            this.bookImgDataGridViewTextBoxColumn.HeaderText = "bookImg";
-            this.bookImgDataGridViewTextBoxColumn.Name = "bookImgDataGridViewTextBoxColumn";
             // 
             // Form5
             // 
@@ -1014,12 +1097,16 @@ namespace DB_PROJECT
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookRackDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).EndInit();
+            this.buyPanel.ResumeLayout(false);
+            this.buyPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bookpreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookRackDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1089,13 +1176,16 @@ namespace DB_PROJECT
         private System.Windows.Forms.Button PS2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridView DGV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookAuthorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn publicationYearDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookFormatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookpriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookImgDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label clrFltr;
+        private System.Windows.Forms.Panel buyPanel;
+        private System.Windows.Forms.Label Author_of_book;
+        private System.Windows.Forms.Label price_ofBook;
+        private System.Windows.Forms.Label name_ofBook;
+        private System.Windows.Forms.Label book_author_lbl;
+        private System.Windows.Forms.Label price_lbl_buy_panel;
+        private System.Windows.Forms.Label name_lbl_buy_pnl;
+        private System.Windows.Forms.PictureBox Bookpreview;
+        private System.Windows.Forms.Button buy_btn;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

@@ -722,9 +722,9 @@ namespace DB_PROJECT
             this.Controls.Add(this.close_picture);
             this.Controls.Add(this.minimize_pictureBox);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.SignUp_panel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel_Forget_pass);
+            this.Controls.Add(this.SignUp_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main_Screen";
